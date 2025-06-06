@@ -1,0 +1,153 @@
+/* 
+ * Updated: Added all required custom fonts with proper fallbacks and exact styling for Suhas name
+ * - Alegreya Medium Italic for 'S' (64px, caps)
+ * - SwearDisplay Italic for 'u' (48px)
+ * - Marcellus Regular for 'h' and 'a' (48px each)
+ * - Silkscreen Regular for 's' (40px)
+ * - Gilroy SemiBold for navigation and social text
+ */
+
+@font-face {
+  font-family: 'Alegreya-MediumItalic';
+  src: url('/fonts/Alegreya-MediumItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SwearDisplay-Italic';
+  src: url('/fonts/SwearDisplay-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Marcellus-Regular';
+  src: url('/fonts/Marcellus-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Silkscreen-Regular';
+  src: url('/fonts/Silkscreen-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy-SemiBold';
+  src: url('/fonts/Gilroy-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Frame container */
+.frame-2, .frame-2 * {
+  box-sizing: border-box;
+}
+
+.frame-2 {
+  width: 242px;
+  height: 242px;
+  position: relative;
+}
+
+/* Social media text */
+.you-can-find-me-on-x {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Gilroy-SemiBold", "Inter", sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 600;
+  position: absolute;
+  left: 0px;
+  top: 212px;
+  width: 242px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.you-can-find-me-on-x:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* Suhas name container */
+.suhas {
+  color: #ffffff;
+  text-align: left;
+  position: absolute;
+  right: 38.84%;
+  left: 0%;
+  width: 61.16%;
+  bottom: 79.75%;
+  top: 0%;
+  height: 20.25%;
+  display: flex;
+  align-items: baseline;
+}
+
+/* Individual letter styles for Suhas */
+.suhas-span {
+  font-family: "Alegreya-MediumItalic", "Alegreya", serif;
+  font-size: 64px;
+  line-height: 29px;
+  letter-spacing: 0.2px;
+  font-weight: 500;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.suhas-span2 {
+  font-family: "SwearDisplay-Italic", "Times", serif;
+  font-size: 48px;
+  line-height: 29px;
+  letter-spacing: 0.2px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.suhas-span3 {
+  font-family: "Marcellus-Regular", "Marcellus", serif;
+  font-size: 48px;
+  line-height: 29px;
+  letter-spacing: 0.2px;
+  font-weight: 400;
+}
+
+.suhas-span4 {
+  font-family: "Silkscreen-Regular", "Silkscreen", monospace;
+  font-size: 40px;
+  line-height: 29px;
+  letter-spacing: 0.2px;
+  font-weight: 400;
+}
+
+/* Navigation menu */
+.about-projects-writings-curator-s-corner {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Gilroy-SemiBold", "Inter", sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 600;
+  position: absolute;
+  left: 26px;
+  top: 69px;
+  width: 214px;
+  height: 119px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
