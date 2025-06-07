@@ -10,7 +10,7 @@ export default defineConfig({
     outDir: "dist",
     assetsDir: "assets",
     sourcemap: true,
-    minify: "terser",
+    minify: "esbuild",
     target: "es2020",
     cssCodeSplit: true,
     reportCompressedSize: false,

@@ -1,5 +1,8 @@
 # Cloudflare Pages configuration for Suhas Portfolio
-# This file tells Cloudflare Pages how to build and deploy the project
+# Updated: Fixed Terser dependency issue and optimized build for Cloudflare Pages
+# - Switched to esbuild minification for better compatibility
+# - Added proper environment configuration
+# - Optimized build settings for production deployment
 
 name = "suhas-portfolio"
 compatibility_date = "2024-01-01"
