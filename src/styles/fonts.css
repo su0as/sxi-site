@@ -1,14 +1,12 @@
 /* 
- * Updated: Fixed font loading for production deployment
+ * Updated: Fixed font loading for production deployment while preserving original design
  * - Added proper font-display for better loading performance
- * - Improved fallback fonts for better compatibility
- * - Added responsive design improvements
+ * - Kept all original positioning and sizing exactly as before
  * - Alegreya Medium Italic for 'S' (64px, caps)
  * - SwearDisplay Italic for 'u' (48px)
  * - Marcellus Regular for 'h' and 'a' (48px each)
  * - Silkscreen Regular for 's' (40px)
  * - Gilroy SemiBold for navigation and social text
- * - Added mobile responsive adjustments
  */
 
 @font-face {
@@ -51,7 +49,7 @@
   font-display: swap;
 }
 
-/* Frame container */
+/* Frame container - original design preserved */
 .frame-2, .frame-2 * {
   box-sizing: border-box;
 }
@@ -62,22 +60,7 @@
   position: relative;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .frame-2 {
-    width: 200px;
-    height: 200px;
-  }
-}
-
-@media (max-width: 480px) {
-  .frame-2 {
-    width: 180px;
-    height: 180px;
-  }
-}
-
-/* Social media text */
+/* Social media text - original positioning */
 .you-can-find-me-on-x {
   color: #ffffff;
   text-align: left;
@@ -102,25 +85,7 @@
   text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-  .you-can-find-me-on-x {
-    font-size: 20px;
-    line-height: 26px;
-    top: 180px;
-    width: 200px;
-  }
-}
-
-@media (max-width: 480px) {
-  .you-can-find-me-on-x {
-    font-size: 18px;
-    line-height: 24px;
-    top: 160px;
-    width: 180px;
-  }
-}
-
-/* Suhas name container */
+/* Suhas name container - original positioning */
 .suhas {
   color: #ffffff;
   text-align: left;
@@ -135,7 +100,7 @@
   align-items: baseline;
 }
 
-/* Individual letter styles for Suhas */
+/* Individual letter styles for Suhas - original sizes */
 .suhas-span {
   font-family: "Alegreya-MediumItalic", "Alegreya", serif;
   font-size: 64px;
@@ -171,43 +136,7 @@
   font-weight: 400;
 }
 
-@media (max-width: 768px) {
-  .suhas-span {
-    font-size: 52px;
-  }
-  
-  .suhas-span2 {
-    font-size: 40px;
-  }
-  
-  .suhas-span3 {
-    font-size: 40px;
-  }
-  
-  .suhas-span4 {
-    font-size: 32px;
-  }
-}
-
-@media (max-width: 480px) {
-  .suhas-span {
-    font-size: 44px;
-  }
-  
-  .suhas-span2 {
-    font-size: 34px;
-  }
-  
-  .suhas-span3 {
-    font-size: 34px;
-  }
-  
-  .suhas-span4 {
-    font-size: 28px;
-  }
-}
-
-/* Navigation menu */
+/* Navigation menu - original positioning */
 .about-projects-writings-curator-s-corner {
   color: #ffffff;
   text-align: left;
@@ -223,24 +152,4 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-}
-
-@media (max-width: 768px) {
-  .about-projects-writings-curator-s-corner {
-    font-size: 20px;
-    line-height: 26px;
-    left: 20px;
-    top: 60px;
-    width: 180px;
-  }
-}
-
-@media (max-width: 480px) {
-  .about-projects-writings-curator-s-corner {
-    font-size: 18px;
-    line-height: 24px;
-    left: 15px;
-    top: 55px;
-    width: 160px;
-  }
 }
