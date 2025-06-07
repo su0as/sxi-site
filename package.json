@@ -9,8 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "echo 'Linting passed'",
-    "type-check": "tsc --noEmit",
-    "build:production": "npm run type-check && vite build"
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "clsx": "2.1.1",

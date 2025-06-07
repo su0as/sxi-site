@@ -1,13 +1,7 @@
-/*
- * Updated: Fixed deployment configuration for Cloudflare Pages
- * - Removed path import that was causing build issues
- * - Optimized build settings for production deployment
- * - Added proper asset handling and chunking strategy
- * - Configured for static site generation
- */
-
 import react from "@vitejs/plugin-react";
+import tailwind from "tailwindcss";
 import { defineConfig } from "vite";
+import { resolve } from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -17,35 +11,23 @@ export default defineConfig({
     outDir: "dist",
     assetsDir: "assets",
     sourcemap: false,
-    minify: "esbuild",
-    target: "es2015",
+    minify: "terser",
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ["react", "react-dom"],
           ui: ["@radix-ui/react-navigation-menu", "lucide-react"]
-        },
-        assetFileNames: (assetInfo) => {
-          const info = assetInfo.name.split('.');
-          const ext = info[info.length - 1];
-          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
-            return `assets/images/[name]-[hash][extname]`;
-          }
-          if (/woff2?|eot|ttf|otf/i.test(ext)) {
-            return `assets/fonts/[name]-[hash][extname]`;
-          }
-          return `assets/[name]-[hash][extname]`;
-        },
-        chunkFileNames: 'assets/js/[name]-[hash].js',
-        entryFileNames: 'assets/js/[name]-[hash].js',
+        }
       }
-    },
-    cssCodeSplit: true,
-    reportCompressedSize: false,
-    chunkSizeWarningLimit: 1000
+    }
   },
   optimizeDeps: {
     include: ["react", "react-dom"]
+  },
+  css: {
+    postcss: {
+      plugins: [tailwind()],
+    },
   },
   server: {
     port: 5173,
