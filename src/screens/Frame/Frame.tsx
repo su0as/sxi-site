@@ -69,7 +69,8 @@ export const Frame = (): JSX.Element => {
           <span>
             <span className="suhas-span">S</span>
             <span className="suhas-span2">u</span>
-            <span className="suhas-span3">ha</span>
+            <span className="suhas-span3">h</span>
+            <span className="suhas-span3">a</span>
             <span className="suhas-span4">s</span>
           </span>
         </div>

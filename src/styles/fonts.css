@@ -111,18 +111,18 @@
 
 /* Individual letter styles for Suhas - exact specifications */
 .suhas-span {
-  font-family: "Alegreya-MediumItalic", sans-serif;
+  font-family: "Alegreya", serif;
   font-size: 64px;
   line-height: 29px;
   letter-spacing: 0.2px;
-  font-weight: 500;
+  font-weight: 500; /* medium */
   font-style: italic;
   text-transform: uppercase;
   transition: color 0.3s ease;
 }
 
 .suhas-span2 {
-  font-family: "SwearDisplay-Italic", sans-serif;
+  font-family: "SwearDisplay", serif;
   font-size: 48px;
   line-height: 29px;
   letter-spacing: 0.2px;
@@ -132,20 +132,22 @@
 }
 
 .suhas-span3 {
-  font-family: "Marcellus-Regular", sans-serif;
+  font-family: "Marcellus", serif;
   font-size: 48px;
   line-height: 29px;
   letter-spacing: 0.2px;
-  font-weight: 400;
+  font-weight: 400; /* regular */
+  font-style: normal;
   transition: color 0.3s ease;
 }
 
 .suhas-span4 {
-  font-family: "Silkscreen-Regular", sans-serif;
+  font-family: "Silkscreen", monospace;
   font-size: 40px;
   line-height: 29px;
   letter-spacing: 0.2px;
-  font-weight: 400;
+  font-weight: 400; /* regular */
+  font-style: normal;
   transition: color 0.3s ease;
 }
 
