@@ -1,5 +1,9 @@
 /* 
- * Updated: Added all required custom fonts with proper fallbacks and exact styling for Suhas name
+ * Updated: Fixed deployment issues and optimized font loading for production
+ * - Added font-display: swap for better performance
+ * - Enhanced responsive design for mobile devices
+ * - Added hover effects and transitions
+ * - Optimized for Cloudflare Pages deployment
  * - Alegreya Medium Italic for 'S' (64px, caps)
  * - SwearDisplay Italic for 'u' (48px)
  * - Marcellus Regular for 'h' and 'a' (48px each)
@@ -58,6 +62,14 @@
   position: relative;
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .frame-2 {
+    width: 200px;
+    height: 200px;
+  }
+}
+
 /* Social media text */
 .you-can-find-me-on-x {
   color: #ffffff;
@@ -75,12 +87,22 @@
   align-items: center;
   justify-content: flex-start;
   text-decoration: none;
-  transition: opacity 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .you-can-find-me-on-x:hover {
-  opacity: 0.8;
+  opacity: 0.9;
   text-decoration: underline;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .you-can-find-me-on-x {
+    font-size: 20px;
+    line-height: 26px;
+    width: 200px;
+    top: 180px;
+  }
 }
 
 /* Suhas name container */
@@ -96,6 +118,7 @@
   height: 20.25%;
   display: flex;
   align-items: baseline;
+  transition: transform 0.3s ease;
 }
 
 /* Individual letter styles for Suhas */
@@ -107,6 +130,13 @@
   font-weight: 500;
   font-style: italic;
   text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .suhas-span {
+    font-size: 48px;
+  }
 }
 
 .suhas-span2 {
@@ -116,6 +146,13 @@
   letter-spacing: 0.2px;
   font-weight: 400;
   font-style: italic;
+  transition: color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .suhas-span2 {
+    font-size: 36px;
+  }
 }
 
 .suhas-span3 {
@@ -124,6 +161,13 @@
   line-height: 29px;
   letter-spacing: 0.2px;
   font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .suhas-span3 {
+    font-size: 36px;
+  }
 }
 
 .suhas-span4 {
@@ -132,6 +176,13 @@
   line-height: 29px;
   letter-spacing: 0.2px;
   font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .suhas-span4 {
+    font-size: 30px;
+  }
 }
 
 /* Navigation menu */
@@ -148,6 +199,29 @@
   width: 214px;
   height: 119px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  gap: 4px;
+}
+
+.about-projects-writings-curator-s-corner > div {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 2px 0;
+}
+
+.about-projects-writings-curator-s-corner > div:hover {
+  transform: translateX(8px);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .about-projects-writings-curator-s-corner {
+    font-size: 20px;
+    line-height: 26px;
+    width: 180px;
+    left: 20px;
+    top: 60px;
+  }
 }

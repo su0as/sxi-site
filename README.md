@@ -10,6 +10,8 @@ A modern, space-themed portfolio website built with React, TypeScript, and Vite.
 - **Performance**: Optimized build with code splitting and asset optimization
 - **SEO Ready**: Meta tags, Open Graph, and Twitter Card support
 - **Accessibility**: ARIA labels and semantic HTML
+- **Production Ready**: Optimized for Cloudflare Pages deployment
+- **Error Handling**: Graceful fallbacks and loading states
 
 ## 🛠️ Tech Stack
 
@@ -18,6 +20,7 @@ A modern, space-themed portfolio website built with React, TypeScript, and Vite.
 - **Vite** - Build tool and dev server
 - **Tailwind CSS** - Styling
 - **Custom Fonts** - Alegreya, SwearDisplay, Marcellus, Silkscreen, Gilroy
+- **Cloudflare Pages** - Deployment platform
 
 ## 📦 Installation
 
@@ -33,25 +36,28 @@ npm run build
 
 # Preview production build
 npm run preview
+
+# Type check
+npm run type-check
+
+# Clean build directory
+npm run clean
 ```
 
-## 🚀 Deployment
+## 🚀 Deployment (Cloudflare Pages)
 
-### Build Command
-```bash
-npm run build
-```
+### Cloudflare Pages Configuration
 
-### Deploy Command (Netlify)
-```bash
-# The build output will be in the 'dist' directory
-# Deploy the 'dist' folder to your hosting provider
-```
+- **Build command**: `npm run build`
+- **Build output directory**: `dist`
+- **Root directory**: `/` (project root)
+- **Node.js version**: `18` or higher
 
-### Environment Setup
-- **Node Version**: 18+
-- **Build Directory**: `dist`
-- **Build Command**: `npm run build`
+### Manual Deployment Steps
+1. Connect your GitHub repository to Cloudflare Pages
+2. Set the build command to `npm run build`
+3. Set the build output directory to `dist`
+4. Deploy automatically on push to main branch
 
 ## 📁 Project Structure
 
@@ -67,6 +73,9 @@ public/
 ├── fonts/                 # Custom font files
 ├── imgbg.png             # Background image
 └── favicon.ico           # Site favicon
+
+dist/                      # Production build output
+wrangler.toml             # Cloudflare configuration
 ```
 
 ## 🎨 Typography
@@ -78,9 +87,17 @@ The name "Suhas" uses a unique mixed-font approach:
 - **a**: Marcellus Regular (48px)
 - **s**: Silkscreen Regular (40px)
 
+## 🔧 Performance Optimizations
+
+- **Font Loading**: `font-display: swap` for better performance
+- **Image Loading**: Lazy loading with fallback gradients
+- **Code Splitting**: Vendor and UI chunks separated
+- **Asset Optimization**: Compressed and cached assets
+- **Responsive Design**: Mobile-first approach
+
 ## 🔗 Links
 
-- **Portfolio**: [Live Site](https://suhas-portfolio.netlify.app)
+- **Portfolio**: [Live Site](https://suhas-portfolio.pages.dev)
 - **Twitter/X**: [@suhasxi](https://x.com/suhasxi)
 
 ## 📄 License

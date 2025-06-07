@@ -1,7 +1,6 @@
 import react from "@vitejs/plugin-react";
 import tailwind from "tailwindcss";
 import { defineConfig } from "vite";
-import { resolve } from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -10,24 +9,32 @@ export default defineConfig({
   build: {
     outDir: "dist",
     assetsDir: "assets",
-    sourcemap: false,
+    sourcemap: true,
     minify: "terser",
+    target: "es2020",
+    cssCodeSplit: true,
+    reportCompressedSize: false,
     rollupOptions: {
       output: {
+        chunkFileNames: "assets/[name]-[hash].js",
+        entryFileNames: "assets/[name]-[hash].js",
+        assetFileNames: "assets/[name]-[hash].[ext]",
         manualChunks: {
           vendor: ["react", "react-dom"],
-          ui: ["@radix-ui/react-navigation-menu", "lucide-react"]
+          ui: ["@radix-ui/react-navigation-menu", "lucide-react"],
+          router: ["react-router-dom"]
         }
       }
     }
   },
   optimizeDeps: {
-    include: ["react", "react-dom"]
+    include: ["react", "react-dom", "react-router-dom"]
   },
   css: {
     postcss: {
       plugins: [tailwind()],
     },
+    devSourcemap: true
   },
   server: {
     port: 5173,
@@ -36,5 +43,8 @@ export default defineConfig({
   preview: {
     port: 4173,
     host: true
+  },
+  define: {
+    __DEV__: JSON.stringify(process.env.NODE_ENV !== "production")
   }
 });

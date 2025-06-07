@@ -1,0 +1,22 @@
+# Cloudflare Pages configuration for Suhas Portfolio
+# This file tells Cloudflare Pages how to build and deploy the project
+
+name = "suhas-portfolio"
+compatibility_date = "2024-01-01"
+
+[build]
+command = "npm run build"
+cwd = "."
+watch_dir = "src"
+
+[build.upload]
+format = "service-worker"
+
+# Environment variables for build
+[env.production.vars]
+NODE_ENV = "production"
+
+# Build configuration
+[site]
+bucket = "./dist"
+entry-point = "workers-site"
