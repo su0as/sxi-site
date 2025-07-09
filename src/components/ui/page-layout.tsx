@@ -1,8 +1,8 @@
 /*
- * Page layout component with exact positioning specifications
- * - Maintains original text positioning and alignment
- * - Uses same background image and layout structure
- * - Preserves exact CSS positioning for all elements
+ * Page layout component for consistent structure across all pages
+ * - Uses exact original positioning and styling
+ * - Maintains background image and text positioning
+ * - Shows active page in navigation
  */
 
 "use client"
@@ -12,16 +12,12 @@ import { Navigation } from "./navigation";
 import "../../styles/fonts.css";
 
 interface PageLayoutProps {
+  children?: React.ReactNode;
   currentPage: string;
   onNavigate: (page: string) => void;
-  children?: React.ReactNode;
 }
 
-export const PageLayout: React.FC<PageLayoutProps> = ({ 
-  currentPage, 
-  onNavigate, 
-  children 
-}) => {
+export const PageLayout: React.FC<PageLayoutProps> = ({ children, currentPage, onNavigate }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
 
@@ -29,14 +25,14 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
     const img = new Image();
     img.onload = () => setImageLoaded(true);
     img.onerror = () => setImageError(true);
-    img.src = '/background-alt.png';
+    img.src = '/imgbg.png';
   }, []);
 
   return (
     <main 
       className="w-full min-h-screen relative overflow-hidden bg-black"
       style={{
-        backgroundImage: imageLoaded && !imageError ? 'url(/background-alt.png)' : 'linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%)',
+        backgroundImage: imageLoaded && !imageError ? 'url(/imgbg.png)' : 'linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -80,7 +76,7 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
           </span>
         </div>
         
-        {/* Navigation menu with exact positioning */}
+        {/* Navigation menu with line breaks as specified */}
         <Navigation onNavigate={onNavigate} currentPage={currentPage} />
       </div>
 

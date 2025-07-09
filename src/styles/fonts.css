@@ -1,10 +1,8 @@
 /* 
- * Updated: Fixed exact positioning and alignment to match specifications
- * - Restored exact CSS structure and positioning as provided
- * - Fixed navigation to use line breaks instead of flex column
- * - Enhanced responsive design for mobile devices
- * - Added hover effects and transitions
- * - Optimized for Cloudflare Pages deployment
+ * Updated: Restored exact original positioning and line spacing as specified
+ * - Reverted to original CSS structure without flex-direction modifications
+ * - Maintained exact positioning values and line heights
+ * - Added navigation hover effects while preserving original layout
  * - Alegreya Medium Italic for 'S' (64px, caps)
  * - SwearDisplay Italic for 'u' (48px)
  * - Marcellus Regular for 'ha' (48px combined)
@@ -165,7 +163,6 @@
   width: 214px;
   height: 119px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   cursor: pointer;
