@@ -1,8 +1,8 @@
 /*
- * Page layout component for consistent structure across all pages
- * - Uses the new background image
- * - Maintains the same positioning and styling as the home page
- * - Includes navigation with active page highlighting
+ * Page layout component with exact positioning specifications
+ * - Maintains original text positioning and alignment
+ * - Uses same background image and layout structure
+ * - Preserves exact CSS positioning for all elements
  */
 
 "use client"
@@ -43,7 +43,7 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
         backgroundAttachment: 'fixed'
       }}
       role="main"
-      aria-label={`Suhas Portfolio - ${currentPage}`}
+      aria-label="Suhas Portfolio"
     >
       {/* Loading state */}
       {!imageLoaded && !imageError && (
@@ -80,11 +80,11 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
           </span>
         </div>
         
-        {/* Navigation menu with hover effects and active highlighting */}
-        <Navigation currentPage={currentPage} onNavigate={onNavigate} />
+        {/* Navigation menu with exact positioning */}
+        <Navigation onNavigate={onNavigate} currentPage={currentPage} />
       </div>
 
-      {/* Page-specific content */}
+      {/* Additional page content */}
       {children}
     </main>
   );

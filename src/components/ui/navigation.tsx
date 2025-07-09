@@ -1,8 +1,8 @@
 /*
- * Navigation component with hover effects and active page highlighting
- * - Individual clickable navigation items with underline hover effects
- * - Active page highlighting with underline
- * - Consistent styling with the main portfolio design
+ * Navigation component with exact positioning and hover effects
+ * - Maintains original text positioning and alignment specifications
+ * - Adds hover underline effects for individual navigation items
+ * - Preserves exact CSS structure and layout
  */
 
 "use client"
@@ -10,39 +10,68 @@
 import React from "react";
 
 interface NavigationProps {
-  currentPage?: string;
   onNavigate: (page: string) => void;
+  currentPage?: string;
 }
 
-export const Navigation: React.FC<NavigationProps> = ({ currentPage, onNavigate }) => {
-  const navItems = [
-    { key: 'about', label: 'About' },
-    { key: 'projects', label: 'Projects' },
-    { key: 'writings', label: 'Writings' },
-    { key: 'curators-corner', label: "Curator's Corner" }
-  ];
+export const Navigation: React.FC<NavigationProps> = ({ onNavigate, currentPage }) => {
+  const handleNavClick = (page: string, event: React.MouseEvent) => {
+    event.preventDefault();
+    onNavigate(page);
+  };
+
+  const handleKeyDown = (page: string, event: React.KeyboardEvent) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      onNavigate(page);
+    }
+  };
 
   return (
     <div className="about-projects-writings-curator-s-corner" aria-label="Main navigation">
-      {navItems.map((item, index) => (
-        <React.Fragment key={item.key}>
-          <span
-            className={`nav-item ${currentPage === item.key ? 'active' : ''}`}
-            onClick={() => onNavigate(item.key)}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter' || e.key === ' ') {
-                onNavigate(item.key);
-              }
-            }}
-            aria-label={`Navigate to ${item.label}`}
-          >
-            {item.label}
-          </span>
-          {index < navItems.length - 1 && <br />}
-        </React.Fragment>
-      ))}
+      <span 
+        className={`nav-item ${currentPage === 'about' ? 'active' : ''}`}
+        onClick={(e) => handleNavClick('about', e)}
+        onKeyDown={(e) => handleKeyDown('about', e)}
+        tabIndex={0}
+        role="button"
+        aria-label="Navigate to About page"
+      >
+        About
+      </span>
+      <br />
+      <span 
+        className={`nav-item ${currentPage === 'projects' ? 'active' : ''}`}
+        onClick={(e) => handleNavClick('projects', e)}
+        onKeyDown={(e) => handleKeyDown('projects', e)}
+        tabIndex={0}
+        role="button"
+        aria-label="Navigate to Projects page"
+      >
+        Projects
+      </span>
+      <br />
+      <span 
+        className={`nav-item ${currentPage === 'writings' ? 'active' : ''}`}
+        onClick={(e) => handleNavClick('writings', e)}
+        onKeyDown={(e) => handleKeyDown('writings', e)}
+        tabIndex={0}
+        role="button"
+        aria-label="Navigate to Writings page"
+      >
+        Writings
+      </span>
+      <br />
+      <span 
+        className={`nav-item ${currentPage === 'curators-corner' ? 'active' : ''}`}
+        onClick={(e) => handleNavClick('curators-corner', e)}
+        onKeyDown={(e) => handleKeyDown('curators-corner', e)}
+        tabIndex={0}
+        role="button"
+        aria-label="Navigate to Curator's Corner page"
+      >
+        Curator's Corner
+      </span>
     </div>
   );
 };
