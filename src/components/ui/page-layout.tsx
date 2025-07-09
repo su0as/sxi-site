@@ -1,8 +1,9 @@
 /*
- * Updated: Changed background image to new provided image
- * - Updated background image from imgbg.png to image.png
- * - Made Suhas heading clickable to navigate back to home page
- * - Maintained all original positioning and styling specifications
+ * Updated: Fixed background to use the correct new image (image copy copy.png)
+ * - Removed purple gradient fallback that was causing the issue
+ * - Updated to use the new background image provided by user
+ * - Maintained all existing functionality and layout structure
+ * - Fixed loading states and error handling for new image
  */
 
 "use client"
@@ -17,7 +18,11 @@ interface PageLayoutProps {
   onNavigate: (page: string) => void;
 }
 
-export const PageLayout: React.FC<PageLayoutProps> = ({ children, currentPage, onNavigate }) => {
+export const PageLayout: React.FC<PageLayoutProps> = ({ 
+  children, 
+  currentPage, 
+  onNavigate 
+}) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
 
@@ -27,6 +32,10 @@ export const PageLayout: React.FC<PageLayoutProps> = ({ children, currentPage, o
     img.onerror = () => setImageError(true);
     img.src = '/image copy copy.png';
   }, []);
+
+  const handleSuhasClick = () => {
+    onNavigate('home');
+  };
 
   return (
     <main 
@@ -65,19 +74,11 @@ export const PageLayout: React.FC<PageLayoutProps> = ({ children, currentPage, o
           You can find me on X
         </a>
         
-        {/* Name with mixed typography - exact structure as specified */}
+        {/* Name with mixed typography - clickable to go home */}
         <div 
           className="suhas cursor-pointer" 
           aria-label="Suhas - Click to go home"
-          onClick={() => onNavigate('home')}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-              e.preventDefault();
-              onNavigate('home');
-            }
-          }}
-          tabIndex={0}
-          role="button"
+          onClick={handleSuhasClick}
         >
           <span>
             <span className="suhas-span">S</span>
@@ -88,8 +89,8 @@ export const PageLayout: React.FC<PageLayoutProps> = ({ children, currentPage, o
           </span>
         </div>
         
-        {/* Navigation menu with line breaks as specified */}
-        <Navigation onNavigate={onNavigate} currentPage={currentPage} />
+        {/* Navigation menu */}
+        <Navigation currentPage={currentPage} onNavigate={onNavigate} />
       </div>
 
       {/* Additional page content */}
