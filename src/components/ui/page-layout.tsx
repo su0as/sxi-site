@@ -41,7 +41,7 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
     <main 
       className="w-full min-h-screen relative overflow-hidden bg-black"
       style={{
-        backgroundImage: imageLoaded && !imageError ? 'url(/image copy copy.png)' : 'linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%)',
+        backgroundImage: imageLoaded && !imageError ? 'url(/background-alt.png)' : 'linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
