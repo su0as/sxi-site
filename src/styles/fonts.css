@@ -167,13 +167,26 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  cursor: pointer;
-  transition: all 0.3s ease;
 }
 
-.about-projects-writings-curator-s-corner:hover {
-  transform: translateX(8px);
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+/* Individual navigation items */
+.nav-item {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+.nav-item:hover {
+  text-decoration: underline;
+  transform: translateX(4px);
+}
+
+.nav-item.active {
+  text-decoration: underline;
+  text-decoration-color: #ffffff;
+  text-underline-offset: 4px;
 }
 
 /* Responsive adjustments */

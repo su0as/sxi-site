@@ -1,21 +1,27 @@
 /*
- * Updated: Added navigation functionality with hover effects and page routing
- * - Implemented clickable navigation items with underline hover effects
- * - Added page routing system for About, Projects, Writings, and Curator's Corner
- * - Maintained exact text positioning and typography specifications
- * - Enhanced user interaction with proper hover states and transitions
- * - Integrated with new background image for consistent theming
+ * Page layout component for consistent structure across all pages
+ * - Uses the new background image
+ * - Maintains the same positioning and styling as the home page
+ * - Includes navigation with active page highlighting
  */
 
+"use client"
+
 import React, { useState, useEffect } from "react";
-import { Navigation } from "../../components/ui/navigation";
+import { Navigation } from "./navigation";
 import "../../styles/fonts.css";
 
-interface FrameProps {
+interface PageLayoutProps {
+  currentPage: string;
   onNavigate: (page: string) => void;
+  children?: React.ReactNode;
 }
 
-export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
+export const PageLayout: React.FC<PageLayoutProps> = ({ 
+  currentPage, 
+  onNavigate, 
+  children 
+}) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
 
@@ -23,21 +29,21 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
     const img = new Image();
     img.onload = () => setImageLoaded(true);
     img.onerror = () => setImageError(true);
-    img.src = '/imgbg.png';
+    img.src = '/background-alt.png';
   }, []);
 
   return (
     <main 
       className="w-full min-h-screen relative overflow-hidden bg-black"
       style={{
-        backgroundImage: imageLoaded && !imageError ? 'url(/imgbg.png)' : 'linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%)',
+        backgroundImage: imageLoaded && !imageError ? 'url(/background-alt.png)' : 'linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'fixed'
       }}
       role="main"
-      aria-label="Suhas Portfolio"
+      aria-label={`Suhas Portfolio - ${currentPage}`}
     >
       {/* Loading state */}
       {!imageLoaded && !imageError && (
@@ -74,9 +80,12 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
           </span>
         </div>
         
-        {/* Navigation menu with line breaks as specified */}
-        <Navigation onNavigate={onNavigate} />
+        {/* Navigation menu with hover effects and active highlighting */}
+        <Navigation currentPage={currentPage} onNavigate={onNavigate} />
       </div>
+
+      {/* Page-specific content */}
+      {children}
     </main>
   );
 };
