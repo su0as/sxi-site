@@ -1,8 +1,8 @@
 /*
- * Page layout component for consistent structure across all pages
- * - Uses exact original positioning and styling
- * - Maintains background image and text positioning
- * - Shows active page in navigation
+ * Updated: Changed background image to new provided image
+ * - Updated background image from imgbg.png to image.png
+ * - Made Suhas heading clickable to navigate back to home page
+ * - Maintained all original positioning and styling specifications
  */
 
 "use client"
@@ -25,14 +25,14 @@ export const PageLayout: React.FC<PageLayoutProps> = ({ children, currentPage, o
     const img = new Image();
     img.onload = () => setImageLoaded(true);
     img.onerror = () => setImageError(true);
-    img.src = '/imgbg.png';
+    img.src = '/image.png';
   }, []);
 
   return (
     <main 
       className="w-full min-h-screen relative overflow-hidden bg-black"
       style={{
-        backgroundImage: imageLoaded && !imageError ? 'url(/imgbg.png)' : 'linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%)',
+        backgroundImage: imageLoaded && !imageError ? 'url(/image.png)' : 'linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -66,7 +66,19 @@ export const PageLayout: React.FC<PageLayoutProps> = ({ children, currentPage, o
         </a>
         
         {/* Name with mixed typography - exact structure as specified */}
-        <div className="suhas" aria-label="Suhas">
+        <div 
+          className="suhas cursor-pointer" 
+          aria-label="Suhas - Click to go home"
+          onClick={() => onNavigate('home')}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              onNavigate('home');
+            }
+          }}
+          tabIndex={0}
+          role="button"
+        >
           <span>
             <span className="suhas-span">S</span>
             <span className="suhas-span2">u</span>
