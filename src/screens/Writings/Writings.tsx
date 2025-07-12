@@ -21,7 +21,7 @@ export const Writings: React.FC<WritingsProps> = ({ onNavigate }) => {
         <div className="max-w-3xl text-white font-['Gilroy-SemiBold',sans-serif]">
           <div className="text-center">
             <h1 className="text-4xl font-semibold mb-12" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
-              In Progress
+              In Progress...
             </h1>
           </div>
         </div>
