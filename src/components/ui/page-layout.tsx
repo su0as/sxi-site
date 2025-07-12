@@ -1,10 +1,9 @@
 /*
- * Updated: Added mobile responsive design with dropdown navigation
- * - Fixed mobile view content positioning to avoid overlap
- * - Added dropdown menu for mobile navigation only
- * - Maintained exact desktop layout without changes
- * - Responsive content positioning for different screen sizes
- * - Fixed loading states and error handling for new image
+ * Updated page layout with smooth transitions
+ * - Improved loading states and animations
+ * - Smooth content transitions
+ * - Better mobile experience
+ * - Consistent timing across all interactions
  */
 
 "use client"
@@ -12,6 +11,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import { Navigation } from "./navigation";
+import { LoadingBar } from "./loading-bar";
 import "../../styles/fonts.css";
 
 interface PageLayoutProps {
@@ -27,6 +27,8 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
 }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
+  const [showContent, setShowContent] = useState(false);
+  const [contentReady, setContentReady] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -36,6 +38,18 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
     img.onerror = () => setImageError(true);
     img.src = '/image copy copy.png';
   }, []);
+
+  useEffect(() => {
+    setContentReady(true);
+  }, []);
+
+  const handleLoadingComplete = () => {
+    setTimeout(() => {
+      setShowContent(true);
+    }, 100);
+  };
+
+  const isLoading = (!imageLoaded && !imageError) || !contentReady;
 
   // Close mobile menu when clicking outside
   useEffect(() => {
@@ -73,18 +87,16 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
       role="main"
       aria-label="Suhas Portfolio"
     >
-      {/* Loading state */}
-      {!imageLoaded && !imageError && (
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>
-        </div>
-      )}
+      {/* Modern loading bar */}
+      <LoadingBar 
+        isLoading={isLoading} 
+        onComplete={handleLoadingComplete}
+      />
 
       {/* Content section with exact positioning */}
-      <div 
-        className="frame-2 absolute top-[276px] left-[166px] hidden md:block" 
+      <div
+        className={`frame-2 absolute top-[276px] left-[166px] hidden md:block transition-all duration-500 ease-out ${showContent || imageError ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'}`}
         aria-label="Portfolio content"
-        style={{ opacity: imageLoaded || imageError ? 1 : 0, transition: 'opacity 0.5s ease-in-out' }}
       >
         {/* Social media text */}
         <a 
@@ -117,7 +129,7 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
       </div>
 
       {/* Mobile Navigation */}
-      <div className="md:hidden" ref={menuRef}>
+      <div className={`md:hidden relative z-50 transition-all duration-500 ease-out ${showContent || imageError ? 'opacity-100' : 'opacity-0'}`} ref={menuRef}>
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -199,8 +211,10 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
         )}
       </div>
 
-      {/* Additional page content */}
-      {children}
+      {/* Page Content */}
+      <div className={`transition-all duration-300 ease-out ${showContent || imageError ? 'opacity-100' : 'opacity-0'}`}>
+        {children}
+      </div>
     </main>
   );
 };
