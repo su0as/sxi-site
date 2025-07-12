@@ -18,8 +18,8 @@ interface ProjectsProps {
 export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
   return (
     <PageLayout currentPage="projects" onNavigate={onNavigate}>
-      <div className="absolute top-[100px] left-[50px] right-[50px] bottom-[50px] overflow-y-auto">
-        <div className="max-w-4xl mx-auto text-white font-['Inter',sans-serif]">
+      <div className="absolute top-[50px] left-[500px] right-[50px] bottom-[50px] overflow-y-auto">
+        <div className="max-w-3xl text-white font-['Inter',sans-serif]">
           {/* Main Title */}
           <h1 className="text-4xl font-semibold mb-12 text-center">
             Projects & Works
