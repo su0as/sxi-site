@@ -50,6 +50,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Gilroy-Regular';
+  src: url('/fonts/Gilroy-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Frame container - exact specifications */
 .frame-2, .frame-2 * {
   box-sizing: border-box;
