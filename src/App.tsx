@@ -1,24 +1,34 @@
 /*
- * Main App component with routing system
- * - Manages navigation between different pages
- * - Maintains consistent layout and theming across all pages
- * - Handles page state and routing logic
+ * Main App component with improved routing and transitions
+ * - Smooth page transitions with fade effects
+ * - Loading state management
+ * - Consistent navigation experience
+ * - Optimized performance with proper state handling
  */
 
 "use client"
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Frame } from "./screens/Frame";
 import { About } from "./screens/About";
 import { Projects } from "./screens/Projects";
 import { Writings } from "./screens/Writings";
 import { CuratorsCorner } from "./screens/CuratorsCorner";
+import { PageTransition } from "./components/ui/page-transition";
 
 export const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<string>('home');
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const handleNavigate = (page: string) => {
-    setCurrentPage(page);
+    if (page === currentPage) return;
+    
+    setIsTransitioning(true);
+    
+    setTimeout(() => {
+      setCurrentPage(page);
+      setIsTransitioning(false);
+    }, 150);
   };
 
   const renderCurrentPage = () => {
@@ -36,5 +46,9 @@ export const App: React.FC = () => {
     }
   };
 
-  return renderCurrentPage();
+  return (
+    <PageTransition isVisible={!isTransitioning}>
+      {renderCurrentPage()}
+    </PageTransition>
+  );
 };

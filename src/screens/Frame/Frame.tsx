@@ -1,14 +1,15 @@
 /*
- * Updated: Added navigation functionality with hover effects and page routing
- * - Implemented clickable navigation items with underline hover effects
- * - Added page routing system for About, Projects, Writings, and Curator's Corner
- * - Maintained exact text positioning and typography specifications
- * - Enhanced user interaction with proper hover states and transitions
- * - Integrated with new background image for consistent theming
+ * Updated: Improved loading experience and smooth transitions
+ * - Modern loading bar instead of spinning loader
+ * - Smooth fade-in transitions for content
+ * - Better performance with optimized image loading
+ * - Maintained exact positioning and typography
+ * - Enhanced user experience with professional loading states
  */
 
 import React, { useState, useEffect } from "react";
 import { Navigation } from "../../components/ui/navigation";
+import { LoadingBar } from "../../components/ui/loading-bar";
 import "../../styles/fonts.css";
 
 interface FrameProps {
@@ -18,6 +19,7 @@ interface FrameProps {
 export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
+  const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
     const img = new Image();
@@ -25,6 +27,12 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
     img.onerror = () => setImageError(true);
     img.src = '/imgbg.png';
   }, []);
+
+  const handleLoadingComplete = () => {
+    setTimeout(() => {
+      setShowContent(true);
+    }, 100);
+  };
 
   return (
     <main 
@@ -39,18 +47,15 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
       role="main"
       aria-label="Suhas Portfolio"
     >
-      {/* Loading state */}
-      {!imageLoaded && !imageError && (
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>
-        </div>
-      )}
+      {/* Modern loading bar */}
+      <LoadingBar 
+        isLoading={!imageLoaded && !imageError} 
+        onComplete={handleLoadingComplete}
+      />
 
       {/* Content section with exact positioning */}
       <div 
-        className="frame-2 absolute top-[276px] left-[166px] hidden md:block" 
-        aria-label="Portfolio content"
-        style={{ opacity: imageLoaded || imageError ? 1 : 0, transition: 'opacity 0.5s ease-in-out' }}
+        className={`frame-2 absolute top-[276px] left-[166px] hidden md:block transition-all duration-500 ease-out ${showContent || imageError ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'}`}
       >
         {/* Social media text */}
         <a 
@@ -80,7 +85,7 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
 
       {/* Mobile Content */}
       <div className="md:hidden flex flex-col items-center justify-center min-h-screen px-4 text-center">
-        <div style={{ opacity: imageLoaded || imageError ? 1 : 0, transition: 'opacity 0.5s ease-in-out' }}>
+        <div className={`transition-all duration-500 ease-out ${showContent || imageError ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'}`}>
           {/* Mobile Suhas Name */}
           <div className="suhas-mobile mb-8">
             <span className="text-white">
