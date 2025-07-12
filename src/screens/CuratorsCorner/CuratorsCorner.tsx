@@ -17,10 +17,22 @@ interface CuratorsCornerProps {
 export const CuratorsCorner: React.FC<CuratorsCornerProps> = ({ onNavigate }) => {
   return (
     <PageLayout currentPage="curators-corner" onNavigate={onNavigate}>
-      <div className="absolute top-1/2 left-[500px] right-[50px] transform -translate-y-1/2">
+      {/* Desktop Content */}
+      <div className="absolute top-1/2 left-[500px] right-[50px] transform -translate-y-1/2 hidden md:block">
         <div className="max-w-3xl text-white font-['Gilroy-SemiBold',sans-serif]">
           <div className="text-center">
             <h1 className="text-4xl font-semibold mb-12" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
+              In Progress...
+            </h1>
+          </div>
+        </div>
+      </div>
+      
+      {/* Mobile Content */}
+      <div className="md:hidden flex items-center justify-center min-h-screen px-4">
+        <div className="max-w-3xl text-white font-['Gilroy-SemiBold',sans-serif]">
+          <div className="text-center">
+            <h1 className="text-2xl font-semibold" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
               In Progress...
             </h1>
           </div>
