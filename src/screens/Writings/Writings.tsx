@@ -17,7 +17,15 @@ interface WritingsProps {
 export const Writings: React.FC<WritingsProps> = ({ onNavigate }) => {
   return (
     <PageLayout currentPage="writings" onNavigate={onNavigate}>
-      {/* Additional content specific to Writings page can be added here */}
+      <div className="absolute top-[50px] left-[500px] right-[50px] bottom-[50px] overflow-y-auto">
+        <div className="max-w-3xl text-white font-['Gilroy-SemiBold',sans-serif]">
+          <div className="text-center">
+            <h1 className="text-4xl font-semibold mb-12" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
+              In Progress
+            </h1>
+          </div>
+        </div>
+      </div>
     </PageLayout>
   );
 };
