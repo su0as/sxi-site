@@ -31,21 +31,45 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
             <h2 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>AI Ecosystem & Open-Source</h2>
             
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Superhub.ai</h3>
+              <a 
+                href="https://superhub.ai/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-xl font-semibold mb-2 block hover:underline transition-all duration-200" 
+                style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}
+              >
+                Superhub.ai
+              </a>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 AI prompts, projects, and reports to stay ahead.
               </p>
             </div>
 
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Open Source Perplexity</h3>
+              <a 
+                href="https://github.com/su0as/LLM-chat-interface" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-xl font-semibold mb-2 block hover:underline transition-all duration-200" 
+                style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}
+              >
+                Open Source Perplexity
+              </a>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 Custom AI chat interfaces for unique experiences.
               </p>
             </div>
 
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>LLMs Web</h3>
+              <a 
+                href="https://github.com/su0as/LLMs-Web" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-xl font-semibold mb-2 block hover:underline transition-all duration-200" 
+                style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}
+              >
+                LLMs Web
+              </a>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 Local AI model testing in-browser.
               </p>
@@ -57,7 +81,15 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
             <h2 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>AI-Powered Creative & Marketing</h2>
             
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Crea Labs</h3>
+              <a 
+                href="https://crea-ai-labs.vercel.app/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-xl font-semibold mb-2 block hover:underline transition-all duration-200" 
+                style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}
+              >
+                Crea Labs
+              </a>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 AI suite for visuals, designs (logos, posters), and dynamic content (text-to-video, avatars). Boost marketing with AI copywriting and social graphics—cost-effective and impactful.
               </p>
@@ -76,7 +108,15 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
             <h2 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>AI Agents for Automation</h2>
             
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>AI Outreach Agent</h3>
+              <a 
+                href="https://github.com/su0as/ai-outreach-agent" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-xl font-semibold mb-2 block hover:underline transition-all duration-200" 
+                style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}
+              >
+                AI Outreach Agent
+              </a>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 Automates customer engagement and deal closures with NLP—scalable and efficient.
               </p>
@@ -90,7 +130,15 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
             </div>
 
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Chess AI Agent</h3>
+              <a 
+                href="https://github.com/su0as/ai-chess-agent" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-xl font-semibold mb-2 block hover:underline transition-all duration-200" 
+                style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}
+              >
+                Chess AI Agent
+              </a>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 Showcases our technical AI expertise.
               </p>
@@ -121,7 +169,15 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
             </div>
 
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Retro Todo</h3>
+              <a 
+                href="https://retro-todo.pages.dev/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-xl font-semibold mb-2 block hover:underline transition-all duration-200" 
+                style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}
+              >
+                Retro Todo
+              </a>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 Simple, auto-sync task management.
               </p>
@@ -140,14 +196,30 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
             <h2 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Niche Projects</h2>
             
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Kardashevscale.co</h3>
+              <a 
+                href="https://kardashevscale.co/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-xl font-semibold mb-2 block hover:underline transition-all duration-200" 
+                style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}
+              >
+                Kardashevscale.co
+              </a>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 Real-time Kardashev Scale tracker for innovation fans.
               </p>
             </div>
 
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Cracekdaf.co</h3>
+              <a 
+                href="https://crackedaf.co/new" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-xl font-semibold mb-2 block hover:underline transition-all duration-200" 
+                style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}
+              >
+                Crackedaf.co
+              </a>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 Platform for unconventional, creative ideas.
               </p>
@@ -169,21 +241,45 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
             <h2 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>AI Ecosystem & Open-Source</h2>
             
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Superhub.ai</h3>
+              <a 
+                href="https://superhub.ai/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-xl font-semibold mb-2 block hover:underline transition-all duration-200" 
+                style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}
+              >
+                Superhub.ai
+              </a>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 AI prompts, projects, and reports to stay ahead.
               </p>
             </div>
 
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Open Source Perplexity</h3>
+              <a 
+                href="https://github.com/su0as/LLM-chat-interface" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-xl font-semibold mb-2 block hover:underline transition-all duration-200" 
+                style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}
+              >
+                Open Source Perplexity
+              </a>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 Custom AI chat interfaces for unique experiences.
               </p>
             </div>
 
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>LLMs Web</h3>
+              <a 
+                href="https://github.com/su0as/LLMs-Web" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-xl font-semibold mb-2 block hover:underline transition-all duration-200" 
+                style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}
+              >
+                LLMs Web
+              </a>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 Local AI model testing in-browser.
               </p>
@@ -195,7 +291,15 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
             <h2 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>AI-Powered Creative & Marketing</h2>
             
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Crea Labs</h3>
+              <a 
+                href="https://crea-ai-labs.vercel.app/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-xl font-semibold mb-2 block hover:underline transition-all duration-200" 
+                style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}
+              >
+                Crea Labs
+              </a>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 AI suite for visuals, designs (logos, posters), and dynamic content (text-to-video, avatars). Boost marketing with AI copywriting and social graphics—cost-effective and impactful.
               </p>
@@ -214,7 +318,15 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
             <h2 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>AI Agents for Automation</h2>
             
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>AI Outreach Agent</h3>
+              <a 
+                href="https://github.com/su0as/ai-outreach-agent" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-xl font-semibold mb-2 block hover:underline transition-all duration-200" 
+                style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}
+              >
+                AI Outreach Agent
+              </a>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 Automates customer engagement and deal closures with NLP—scalable and efficient.
               </p>
@@ -228,7 +340,15 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
             </div>
 
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Chess AI Agent</h3>
+              <a 
+                href="https://github.com/su0as/ai-chess-agent" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-xl font-semibold mb-2 block hover:underline transition-all duration-200" 
+                style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}
+              >
+                Chess AI Agent
+              </a>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 Showcases our technical AI expertise.
               </p>
@@ -259,7 +379,15 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
             </div>
 
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Retro Todo</h3>
+              <a 
+                href="https://retro-todo.pages.dev/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-xl font-semibold mb-2 block hover:underline transition-all duration-200" 
+                style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}
+              >
+                Retro Todo
+              </a>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 Simple, auto-sync task management.
               </p>
@@ -278,14 +406,30 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
             <h2 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Niche Projects</h2>
             
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Kardashevscale.co</h3>
+              <a 
+                href="https://kardashevscale.co/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-xl font-semibold mb-2 block hover:underline transition-all duration-200" 
+                style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}
+              >
+                Kardashevscale.co
+              </a>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 Real-time Kardashev Scale tracker for innovation fans.
               </p>
             </div>
 
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Cracekdaf.co</h3>
+              <a 
+                href="https://crackedaf.co/new" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-xl font-semibold mb-2 block hover:underline transition-all duration-200" 
+                style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}
+              >
+                Crackedaf.co
+              </a>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 Platform for unconventional, creative ideas.
               </p>
