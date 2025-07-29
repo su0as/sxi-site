@@ -150,7 +150,15 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
             <h2 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Manufacturing Solutions</h2>
             
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Machina</h3>
+              <a 
+                href="https://machina-aihub.vercel.app/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-xl font-semibold mb-2 block hover:underline transition-all duration-200" 
+                style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}
+              >
+                Machina
+              </a>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 Alibaba alternative for Indian sourcing—competitive and fast.
               </p>
@@ -360,7 +368,15 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
             <h2 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Manufacturing Solutions</h2>
             
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Machina</h3>
+              <a 
+                href="https://machina-aihub.vercel.app/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-xl font-semibold mb-2 block hover:underline transition-all duration-200" 
+                style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}
+              >
+                Machina
+              </a>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 Alibaba alternative for Indian sourcing—competitive and fast.
               </p>
