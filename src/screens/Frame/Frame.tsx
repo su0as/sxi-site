@@ -86,53 +86,56 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
       {/* Mobile Content */}
       <div className="md:hidden flex flex-col items-center justify-center min-h-screen px-4 text-center">
         <div className={`transition-all duration-500 ease-out ${showContent || imageError ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'}`}>
-          {/* Mobile Suhas Name */}
-          <div className="suhas-mobile mb-8">
-            <span className="text-white">
-              <span className="font-['Alegreya',serif] font-medium italic text-4xl">S</span>
-              <span className="font-['SwearDisplay',serif] italic text-3xl">u</span>
-              <span className="font-['Marcellus',serif] text-3xl">h</span>
-              <span className="font-['Marcellus',serif] text-3xl">a</span>
-              <span className="font-['Silkscreen',monospace] text-2xl">s</span>
-            </span>
-          </div>
+          <div className="mobile-content-container">
+            {/* Mobile Suhas Name */}
+            <div className="mobile-name-container">
+              <span className="text-white">
+                <span style={{ fontFamily: 'Alegreya-MediumItalic, Alegreya, serif', fontWeight: 500, fontStyle: 'italic' }} className="text-4xl uppercase">S</span>
+                <span style={{ fontFamily: 'SwearDisplay-Italic, serif', fontWeight: 400, fontStyle: 'italic' }} className="text-3xl">u</span>
+                <span style={{ fontFamily: 'Marcellus-Regular, Marcellus, serif', fontWeight: 400 }} className="text-3xl">h</span>
+                <span style={{ fontFamily: 'Marcellus-Regular, Marcellus, serif', fontWeight: 400 }} className="text-3xl">a</span>
+                <span style={{ fontFamily: 'Silkscreen-Regular, Silkscreen, monospace', fontWeight: 400 }} className="text-2xl">s</span>
+              </span>
+            </div>
 
-          {/* Mobile Navigation */}
-          <div className="space-y-4 mb-8">
-            <button
-              onClick={() => onNavigate('about')}
-              className="block w-full text-white font-['Gilroy-SemiBold',sans-serif] text-xl hover:text-gray-300 transition-colors"
+            {/* Mobile Navigation */}
+            <div className="space-y-4 mb-8">
+              <button
+                onClick={() => onNavigate('about')}
+                className="mobile-nav-button"
+              >
+                About
+              </button>
+              <button
+                onClick={() => onNavigate('projects')}
+                className="mobile-nav-button"
+              >
+                Projects
+              </button>
+              <button
+                onClick={() => onNavigate('writings')}
+                className="mobile-nav-button"
+              >
+                Writings
+              </button>
+              <button
+                onClick={() => onNavigate('curators-corner')}
+                className="mobile-nav-button"
+              >
+                Curator's Corner
+              </button>
+            </div>
+            
+            {/* Mobile Social Link */}
+            <a 
+              href="https://x.com/suhasxi" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="mobile-social-link"
             >
-              About
-            </button>
-            <button
-              onClick={() => onNavigate('projects')}
-              className="block w-full text-white font-['Gilroy-SemiBold',sans-serif] text-xl hover:text-gray-300 transition-colors"
-            >
-              Projects
-            </button>
-            <button
-              onClick={() => onNavigate('writings')}
-              className="block w-full text-white font-['Gilroy-SemiBold',sans-serif] text-xl hover:text-gray-300 transition-colors"
-            >
-              Writings
-            </button>
-            <button
-              onClick={() => onNavigate('curators-corner')}
-              className="block w-full text-white font-['Gilroy-SemiBold',sans-serif] text-xl hover:text-gray-300 transition-colors"
-            >
-              Curator's Corner
-            </button>
+              You can find me on X
+            </a>
           </div>
-          {/* Mobile Social Link */}
-          <a 
-            href="https://x.com/suhasxi" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-white font-['Gilroy-SemiBold',sans-serif] text-lg hover:text-gray-300 transition-colors"
-          >
-            You can find me on X
-          </a>
         </div>
       </div>
     </main>

@@ -29,9 +29,9 @@ export const CuratorsCorner: React.FC<CuratorsCornerProps> = ({ onNavigate }) =>
       </div>
       
       {/* Mobile Content */}
-      <div className="md:hidden flex items-center justify-center min-h-screen px-4">
+      <div className="md:hidden flex items-center justify-center min-h-screen px-6">
         <div className="max-w-3xl text-white font-['Gilroy-SemiBold',sans-serif]">
-          <div className="text-center">
+          <div className="text-center bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
             <h1 className="text-2xl font-semibold" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
               In Progress...
             </h1>

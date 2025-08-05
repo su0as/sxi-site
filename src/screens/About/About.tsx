@@ -36,9 +36,14 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
       </div>
       
       {/* Mobile Content */}
-      <div className="md:hidden px-4 py-20">
+      <div className="md:hidden px-6 py-16 min-h-screen flex items-center">
         <div className="max-w-3xl text-white font-['Gilroy-SemiBold',sans-serif]">
-          <div className="text-lg font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
+          <div className="bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
+            <h1 className="text-3xl font-semibold mb-8 text-center" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
+              About
+            </h1>
+            
+            <div className="text-lg font-normal leading-relaxed space-y-6" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
             <p className="mb-6">
               I like to <span className="font-semibold" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif', fontWeight: 600 }}>ask questions</span>. Basically <span className="font-semibold" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif', fontWeight: 600 }}>ask "why?"</span> about everything, <span className="font-semibold" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif', fontWeight: 600 }}>breaking it down to first principles</span>. I <span className="font-semibold" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif', fontWeight: 600 }}>read</span> widely, from <span className="font-semibold" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif', fontWeight: 600 }}>philosophy to physics</span>, and simplify complex ideas. I enjoy video games for <span className="font-semibold" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif', fontWeight: 600 }}>strategy, systems, and RPG elements.</span>
             </p>
@@ -50,6 +55,7 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
             <p>
               Lmk if you wanna geek out or building something epic.
             </p>
+            </div>
           </div>
         </div>
       </div>
