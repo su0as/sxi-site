@@ -30,7 +30,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>AI Ecosystem & Open-Source</h2>
             
-            <div className="mb-6">
+            <div className="mb-6 ml-6">
               <a 
                 href="https://superhub.ai/" 
                 target="_blank" 
@@ -45,7 +45,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
               </p>
             </div>
 
-            <div className="mb-6">
+            <div className="mb-6 ml-6">
               <a 
                 href="https://github.com/su0as/LLM-chat-interface" 
                 target="_blank" 
@@ -60,7 +60,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
               </p>
             </div>
 
-            <div className="mb-6">
+            <div className="mb-6 ml-6">
               <a 
                 href="https://github.com/su0as/LLMs-Web" 
                 target="_blank" 
@@ -80,7 +80,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>AI-Powered Creative & Marketing</h2>
             
-            <div className="mb-6">
+            <div className="mb-6 ml-6">
               <a 
                 href="https://crea-ai-labs.vercel.app/" 
                 target="_blank" 
@@ -95,7 +95,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
               </p>
             </div>
 
-            <div className="mb-6">
+            <div className="mb-6 ml-6">
               <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>LLMs Wrapped</h3>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 Spotify Wrapped-style summary of AI tools (ChatGPT, Gemini) to evaluate options fast.
@@ -107,7 +107,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>AI Agents for Automation</h2>
             
-            <div className="mb-6">
+            <div className="mb-6 ml-6">
               <a 
                 href="https://github.com/su0as/ai-outreach-agent" 
                 target="_blank" 
@@ -122,14 +122,14 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
               </p>
             </div>
 
-            <div className="mb-6">
+            <div className="mb-6 ml-6">
               <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>First Principles LLM</h3>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 Solves complex problems with actionable insights.
               </p>
             </div>
 
-            <div className="mb-6">
+            <div className="mb-6 ml-6">
               <a 
                 href="https://github.com/su0as/ai-chess-agent" 
                 target="_blank" 
@@ -149,7 +149,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Manufacturing Solutions</h2>
             
-            <div className="mb-6">
+            <div className="mb-6 ml-6">
               <a 
                 href="https://machina-aihub.vercel.app/" 
                 target="_blank" 
@@ -169,14 +169,14 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Productivity Tools</h2>
             
-            <div className="mb-6">
+            <div className="mb-6 ml-6">
               <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Notify</h3>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 Real-time keyword tracking via WhatsApp for trends and competitors.
               </p>
             </div>
 
-            <div className="mb-6">
+            <div className="mb-6 ml-6">
               <a 
                 href="https://retro-todo.pages.dev/" 
                 target="_blank" 
@@ -191,7 +191,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
               </p>
             </div>
 
-            <div className="mb-6">
+            <div className="mb-6 ml-6">
               <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Notes AI</h3>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 AI-powered notes for organization and insights.
@@ -203,7 +203,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Niche Projects</h2>
             
-            <div className="mb-6">
+            <div className="mb-6 ml-6">
               <a 
                 href="https://kardashevscale.co/" 
                 target="_blank" 
@@ -218,7 +218,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
               </p>
             </div>
 
-            <div className="mb-6">
+            <div className="mb-6 ml-6">
               <a 
                 href="https://crackedaf.co/new" 
                 target="_blank" 
@@ -248,7 +248,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>AI Ecosystem & Open-Source</h2>
             
-            <div className="mb-6">
+            <div className="mb-6 ml-4">
               <a 
                 href="https://superhub.ai/" 
                 target="_blank" 
@@ -263,7 +263,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
               </p>
             </div>
 
-            <div className="mb-6">
+            <div className="mb-6 ml-4">
               <a 
                 href="https://github.com/su0as/LLM-chat-interface" 
                 target="_blank" 
@@ -278,7 +278,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
               </p>
             </div>
 
-            <div className="mb-6">
+            <div className="mb-6 ml-4">
               <a 
                 href="https://github.com/su0as/LLMs-Web" 
                 target="_blank" 
@@ -298,7 +298,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>AI-Powered Creative & Marketing</h2>
             
-            <div className="mb-6">
+            <div className="mb-6 ml-4">
               <a 
                 href="https://crea-ai-labs.vercel.app/" 
                 target="_blank" 
@@ -313,7 +313,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
               </p>
             </div>
 
-            <div className="mb-6">
+            <div className="mb-6 ml-4">
               <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>LLMs Wrapped</h3>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 Spotify Wrapped-style summary of AI tools (ChatGPT, Gemini) to evaluate options fast.
@@ -325,7 +325,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>AI Agents for Automation</h2>
             
-            <div className="mb-6">
+            <div className="mb-6 ml-4">
               <a 
                 href="https://github.com/su0as/ai-outreach-agent" 
                 target="_blank" 
@@ -340,14 +340,14 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
               </p>
             </div>
 
-            <div className="mb-6">
+            <div className="mb-6 ml-4">
               <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>First Principles LLM</h3>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 Solves complex problems with actionable insights.
               </p>
             </div>
 
-            <div className="mb-6">
+            <div className="mb-6 ml-4">
               <a 
                 href="https://github.com/su0as/ai-chess-agent" 
                 target="_blank" 
@@ -367,7 +367,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Manufacturing Solutions</h2>
             
-            <div className="mb-6">
+            <div className="mb-6 ml-4">
               <a 
                 href="https://machina-aihub.vercel.app/" 
                 target="_blank" 
@@ -387,14 +387,14 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Productivity Tools</h2>
             
-            <div className="mb-6">
+            <div className="mb-6 ml-4">
               <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Notify</h3>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 Real-time keyword tracking via WhatsApp for trends and competitors.
               </p>
             </div>
 
-            <div className="mb-6">
+            <div className="mb-6 ml-4">
               <a 
                 href="https://retro-todo.pages.dev/" 
                 target="_blank" 
@@ -409,7 +409,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
               </p>
             </div>
 
-            <div className="mb-6">
+            <div className="mb-6 ml-4">
               <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Notes AI</h3>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 AI-powered notes for organization and insights.
@@ -421,7 +421,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Niche Projects</h2>
             
-            <div className="mb-6">
+            <div className="mb-6 ml-4">
               <a 
                 href="https://kardashevscale.co/" 
                 target="_blank" 
@@ -436,7 +436,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
               </p>
             </div>
 
-            <div className="mb-6">
+            <div className="mb-6 ml-4">
               <a 
                 href="https://crackedaf.co/new" 
                 target="_blank" 
