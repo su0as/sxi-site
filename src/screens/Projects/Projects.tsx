@@ -18,6 +18,7 @@ interface ProjectsProps {
 export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
   return (
     <PageLayout currentPage="projects" onNavigate={onNavigate}>
+      <>
       {/* Desktop Content */}
       <div className="absolute top-[50px] left-[500px] right-[50px] bottom-[50px] overflow-y-auto hidden md:block">
         <div className="max-w-3xl text-white font-['Gilroy-SemiBold',sans-serif]">
@@ -526,6 +527,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
           </div>
         </div>
       </div>
+      </>
     </PageLayout>
   )
   );
