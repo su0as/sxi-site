@@ -237,6 +237,19 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
               <a 
                 href="https://crackedaf.co/new" 
                 target="_blank" 
+               rel="noopener noreferrer"
+               className="text-xl font-semibold mb-2 block hover:underline transition-all duration-200" 
+               style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}
+             >
+               Crackedaf.co
+             </a>
+             <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
+               Platform for unconventional, creative ideas.
+             </p>
+           </div>
+         </section>
+       </div>
+
       <div className="md:hidden min-h-screen bg-gradient-to-b from-black/40 via-black/20 to-black/40 backdrop-blur-sm">
         <div className="px-5 py-8 overflow-y-auto max-h-screen">
           <div className="max-w-sm mx-auto">
