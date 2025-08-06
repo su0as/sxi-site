@@ -90,11 +90,11 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
             {/* Mobile Suhas Name */}
             <div className="mobile-name-container">
               <span className="text-white">
-                <span style={{ fontFamily: 'Alegreya-MediumItalic, Alegreya, serif', fontWeight: 500, fontStyle: 'italic' }} className="text-4xl uppercase">S</span>
-                <span style={{ fontFamily: 'SwearDisplay-Italic, serif', fontWeight: 400, fontStyle: 'italic' }} className="text-3xl">u</span>
-                <span style={{ fontFamily: 'Marcellus-Regular, Marcellus, serif', fontWeight: 400 }} className="text-3xl">h</span>
-                <span style={{ fontFamily: 'Marcellus-Regular, Marcellus, serif', fontWeight: 400 }} className="text-3xl">a</span>
-                <span style={{ fontFamily: 'Silkscreen-Regular, Silkscreen, monospace', fontWeight: 400 }} className="text-2xl">s</span>
+                <span className="suhas-span">S</span>
+                <span className="suhas-span2">u</span>
+                <span className="suhas-span3">h</span>
+                <span className="suhas-span3">a</span>
+                <span className="suhas-span4">s</span>
               </span>
             </div>
 
