@@ -47,21 +47,6 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
 
             <div className="mb-6 ml-6">
               <a 
-                href="https://svaraai.vercel.app/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-xl font-semibold mb-2 block hover:underline transition-all duration-200" 
-                style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}
-              >
-                Svara - AI Notes App
-              </a>
-              <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
-                Minimalist writing and reflection app designed to help users capture their thoughts through timed freewriting. It then provides AI-powered insights and pattern recognition to deepen understanding and foster clarity.
-              </p>
-            </div>
-
-            <div className="mb-6 ml-6">
-              <a 
                 href="https://github.com/su0as/LLM-chat-interface" 
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -277,21 +262,6 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
                   </a>
                   <p className="text-sm font-normal leading-relaxed text-gray-300" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                     AI prompts, projects, and reports to stay ahead.
-                  </p>
-                </div>
-
-                <div className="bg-white/5 rounded-lg p-4 border border-white/10">
-                  <a 
-                    href="https://svaraai.vercel.app/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-lg font-semibold mb-2 block hover:underline transition-all duration-200" 
-                    style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}
-                  >
-                    Svara - AI Notes App
-                  </a>
-                  <p className="text-sm font-normal leading-relaxed text-gray-300" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
-                    Minimalist writing and reflection app designed to help users capture their thoughts through timed freewriting. It then provides AI-powered insights and pattern recognition to deepen understanding and foster clarity.
                   </p>
                 </div>
 

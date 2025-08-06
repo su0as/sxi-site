@@ -16,14 +16,7 @@
   font-weight: 500;
   font-style: italic;
   font-display: swap;
-}
-
-@font-face {
-  font-family: 'Alegreya';
-  src: url('/fonts/Alegreya-MediumItalic.woff2') format('woff2');
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
@@ -32,14 +25,7 @@
   font-weight: 400;
   font-style: italic;
   font-display: swap;
-}
-
-@font-face {
-  font-family: 'SwearDisplay';
-  src: url('/fonts/SwearDisplay-Italic.woff2') format('woff2');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
@@ -48,14 +34,7 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-}
-
-@font-face {
-  font-family: 'Marcellus';
-  src: url('/fonts/Marcellus-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
@@ -64,14 +43,7 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-}
-
-@font-face {
-  font-family: 'Silkscreen';
-  src: url('/fonts/Silkscreen-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
@@ -80,6 +52,7 @@
   font-weight: 600;
   font-style: normal;
   font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
@@ -88,6 +61,7 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 /* Frame container - exact specifications */
@@ -149,7 +123,7 @@
 
 /* Individual letter styles for Suhas - exact specifications */
 .suhas-span {
-  font-family: "Alegreya", "Alegreya-MediumItalic", serif !important;
+  font-family: "Alegreya", serif;
   font-size: 64px;
   line-height: 29px;
   letter-spacing: 0.2px;
@@ -160,7 +134,7 @@
 }
 
 .suhas-span2 {
-  font-family: "SwearDisplay", "SwearDisplay-Italic", serif !important;
+  font-family: "SwearDisplay", serif;
   font-size: 48px;
   line-height: 29px;
   letter-spacing: 0.2px;
@@ -170,7 +144,7 @@
 }
 
 .suhas-span3 {
-  font-family: "Marcellus", "Marcellus-Regular", serif !important;
+  font-family: "Marcellus", serif;
   font-size: 48px;
   line-height: 29px;
   letter-spacing: 0.2px;
@@ -180,7 +154,7 @@
 }
 
 .suhas-span4 {
-  font-family: "Silkscreen", "Silkscreen-Regular", monospace !important;
+  font-family: "Silkscreen", monospace;
   font-size: 40px;
   line-height: 29px;
   letter-spacing: 0.2px;

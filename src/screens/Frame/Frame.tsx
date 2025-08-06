@@ -6,30 +6,36 @@
  * - Maintained exact positioning and typography
  * - Enhanced user experience with professional loading states
  */
+
 import React, { useState, useEffect } from "react";
 import { Navigation } from "../../components/ui/navigation";
 import { LoadingBar } from "../../components/ui/loading-bar";
 import "../../styles/fonts.css";
+
 interface FrameProps {
   onNavigate: (page: string) => void;
 }
+
 export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
   const [showContent, setShowContent] = useState(false);
+
   useEffect(() => {
     const img = new Image();
     img.onload = () => setImageLoaded(true);
     img.onerror = () => setImageError(true);
     img.src = '/imgbg.png';
   }, []);
+
   const handleLoadingComplete = () => {
     setTimeout(() => {
       setShowContent(true);
     }, 100);
   };
+
   return (
-    <main
+    <main 
       className="w-full min-h-screen relative overflow-hidden bg-black"
       style={{
         backgroundImage: imageLoaded && !imageError ? 'url(/imgbg.png)' : 'linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%)',
@@ -42,53 +48,56 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
       aria-label="Suhas Portfolio"
     >
       {/* Modern loading bar */}
-      <LoadingBar
-        isLoading={!imageLoaded && !imageError}
+      <LoadingBar 
+        isLoading={!imageLoaded && !imageError} 
         onComplete={handleLoadingComplete}
       />
+
       {/* Content section with exact positioning */}
-      <div
+      <div 
         className={`frame-2 absolute top-[276px] left-[166px] hidden md:block transition-all duration-500 ease-out ${showContent || imageError ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'}`}
       >
         {/* Social media text */}
-        <a
-          href="https://x.com/suhasxi"
-          target="_blank"
+        <a 
+          href="https://x.com/suhasxi" 
+          target="_blank" 
           rel="noopener noreferrer"
           className="you-can-find-me-on-x hover:scale-105 transition-transform duration-200"
           aria-label="Find Suhas on X (formerly Twitter)"
         >
           You can find me on X
         </a>
-       
+        
         {/* Name with mixed typography - exact structure as specified */}
         <div className="suhas" aria-label="Suhas">
           <span>
-            <span className="suhas-span" style={{ fontFamily: 'Alegreya', fontWeight: 500, fontStyle: 'italic', fontSize: '64px', textTransform: 'uppercase' }}>S</span>
-            <span className="suhas-span2" style={{ fontFamily: 'SwearDisplay', fontStyle: 'italic', fontSize: '48px' }}>u</span>
-            <span className="suhas-span3" style={{ fontFamily: 'Marcellus', fontWeight: 400, fontSize: '48px' }}>h</span>
-            <span className="suhas-span3" style={{ fontFamily: 'Marcellus', fontWeight: 400, fontSize: '48px' }}>a</span>
-            <span className="suhas-span4" style={{ fontFamily: 'Silkscreen', fontWeight: 400, fontSize: '40px' }}>s</span>
+            <span className="suhas-span">S</span>
+            <span className="suhas-span2">u</span>
+            <span className="suhas-span3">h</span>
+            <span className="suhas-span3">a</span>
+            <span className="suhas-span4">s</span>
           </span>
         </div>
-       
+        
         {/* Navigation menu with line breaks as specified */}
         <Navigation onNavigate={onNavigate} />
       </div>
+
       {/* Mobile Content */}
       <div className="md:hidden flex flex-col items-center justify-center min-h-screen px-4 text-center">
         <div className={`transition-all duration-500 ease-out ${showContent || imageError ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'}`}>
           <div className="mobile-content-container">
             {/* Mobile Suhas Name */}
             <div className="mobile-name-container">
-              <div className="text-white flex items-baseline justify-center">
-                <span className="suhas-span" style={{ fontFamily: 'Alegreya, serif', fontWeight: 500, fontStyle: 'italic', fontSize: '48px', textTransform: 'uppercase' }}>S</span>
-                <span className="suhas-span2" style={{ fontFamily: 'SwearDisplay, serif', fontStyle: 'italic', fontSize: '36px' }}>u</span>
-                <span className="suhas-span3" style={{ fontFamily: 'Marcellus, serif', fontWeight: 400, fontSize: '36px' }}>h</span>
-                <span className="suhas-span3" style={{ fontFamily: 'Marcellus, serif', fontWeight: 400, fontSize: '36px' }}>a</span>
-                <span className="suhas-span4" style={{ fontFamily: 'Silkscreen, monospace', fontWeight: 400, fontSize: '30px' }}>s</span>
-              </div>
+              <span className="text-white">
+                <span style={{ fontFamily: 'Alegreya-MediumItalic, Alegreya, serif', fontWeight: 500, fontStyle: 'italic' }} className="text-4xl uppercase">S</span>
+                <span style={{ fontFamily: 'SwearDisplay-Italic, serif', fontWeight: 400, fontStyle: 'italic' }} className="text-3xl">u</span>
+                <span style={{ fontFamily: 'Marcellus-Regular, Marcellus, serif', fontWeight: 400 }} className="text-3xl">h</span>
+                <span style={{ fontFamily: 'Marcellus-Regular, Marcellus, serif', fontWeight: 400 }} className="text-3xl">a</span>
+                <span style={{ fontFamily: 'Silkscreen-Regular, Silkscreen, monospace', fontWeight: 400 }} className="text-2xl">s</span>
+              </span>
             </div>
+
             {/* Mobile Navigation */}
             <div className="space-y-4 mb-8">
               <button
@@ -116,11 +125,11 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
                 Curator's Corner
               </button>
             </div>
-           
+            
             {/* Mobile Social Link */}
-            <a
-              href="https://x.com/suhasxi"
-              target="_blank"
+            <a 
+              href="https://x.com/suhasxi" 
+              target="_blank" 
               rel="noopener noreferrer"
               className="mobile-social-link"
             >
