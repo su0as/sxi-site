@@ -120,7 +120,7 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
                 <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-1 border border-white/20 shadow-xl">
                   <button
                     onClick={() => onNavigate('about')}
-                    className="w-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 hover:from-blue-500/20 hover:to-purple-500/20 rounded-xl p-4 text-white font-['Gilroy-SemiBold',sans-serif] text-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg border border-white/10 hover:border-white/30"
+                    className="w-full bg-white/5 hover:bg-white/10 rounded-xl p-4 text-white font-['Gilroy-SemiBold',sans-serif] text-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg border border-white/10 hover:border-white/30"
                   >
                     <div className="flex items-center justify-between">
                       <span>About</span>
@@ -132,7 +132,7 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
                 <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-1 border border-white/20 shadow-xl">
                   <button
                     onClick={() => onNavigate('projects')}
-                    className="w-full bg-gradient-to-r from-green-500/10 to-teal-500/10 hover:from-green-500/20 hover:to-teal-500/20 rounded-xl p-4 text-white font-['Gilroy-SemiBold',sans-serif] text-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg border border-white/10 hover:border-white/30"
+                    className="w-full bg-white/5 hover:bg-white/10 rounded-xl p-4 text-white font-['Gilroy-SemiBold',sans-serif] text-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg border border-white/10 hover:border-white/30"
                   >
                     <div className="flex items-center justify-between">
                       <span>Projects</span>
@@ -144,7 +144,7 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
                 <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-1 border border-white/20 shadow-xl">
                   <button
                     onClick={() => onNavigate('writings')}
-                    className="w-full bg-gradient-to-r from-orange-500/10 to-red-500/10 hover:from-orange-500/20 hover:to-red-500/20 rounded-xl p-4 text-white font-['Gilroy-SemiBold',sans-serif] text-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg border border-white/10 hover:border-white/30"
+                    className="w-full bg-white/5 hover:bg-white/10 rounded-xl p-4 text-white font-['Gilroy-SemiBold',sans-serif] text-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg border border-white/10 hover:border-white/30"
                   >
                     <div className="flex items-center justify-between">
                       <span>Writings</span>
@@ -156,7 +156,7 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
                 <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-1 border border-white/20 shadow-xl">
                   <button
                     onClick={() => onNavigate('curators-corner')}
-                    className="w-full bg-gradient-to-r from-purple-500/10 to-pink-500/10 hover:from-purple-500/20 hover:to-pink-500/20 rounded-xl p-4 text-white font-['Gilroy-SemiBold',sans-serif] text-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg border border-white/10 hover:border-white/30"
+                    className="w-full bg-white/5 hover:bg-white/10 rounded-xl p-4 text-white font-['Gilroy-SemiBold',sans-serif] text-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg border border-white/10 hover:border-white/30"
                   >
                     <div className="flex items-center justify-between">
                       <span>Curator's Corner</span>
