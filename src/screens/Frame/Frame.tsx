@@ -89,13 +89,13 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
           <div className="mobile-content-container">
             {/* Mobile Suhas Name */}
             <div className="mobile-name-container">
-              <span className="text-white">
+              <div className="text-white flex items-baseline justify-center">
                 <span className="suhas-span">S</span>
                 <span className="suhas-span2">u</span>
                 <span className="suhas-span3">h</span>
                 <span className="suhas-span3">a</span>
                 <span className="suhas-span4">s</span>
-              </span>
+              </div>
             </div>
 
             {/* Mobile Navigation */}
