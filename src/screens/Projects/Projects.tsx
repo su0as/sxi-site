@@ -834,3 +834,5 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
   )
   );
 };
+  )
+}
