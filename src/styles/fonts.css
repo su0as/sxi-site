@@ -12,7 +12,8 @@
 
 @font-face {
   font-family: 'Alegreya-MediumItalic';
-  src: url('/fonts/Alegreya-MediumItalic.woff2') format('woff2');
+  src: url('/fonts/Alegreya-MediumItalic.woff2') format('woff2'),
+       url('/fonts/Alegreya-MediumItalic.woff') format('woff');
   font-weight: 500;
   font-style: italic;
   font-display: swap;
@@ -21,7 +22,8 @@
 
 @font-face {
   font-family: 'SwearDisplay-Italic';
-  src: url('/fonts/SwearDisplay-Italic.woff2') format('woff2');
+  src: url('/fonts/SwearDisplay-Italic.woff2') format('woff2'),
+       url('/fonts/SwearDisplay-Italic.woff') format('woff');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -30,7 +32,8 @@
 
 @font-face {
   font-family: 'Marcellus-Regular';
-  src: url('/fonts/Marcellus-Regular.woff2') format('woff2');
+  src: url('/fonts/Marcellus-Regular.woff2') format('woff2'),
+       url('/fonts/Marcellus-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -39,7 +42,8 @@
 
 @font-face {
   font-family: 'Silkscreen-Regular';
-  src: url('/fonts/Silkscreen-Regular.woff2') format('woff2');
+  src: url('/fonts/Silkscreen-Regular.woff2') format('woff2'),
+       url('/fonts/Silkscreen-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -48,7 +52,8 @@
 
 @font-face {
   font-family: 'Gilroy-SemiBold';
-  src: url('/fonts/Gilroy-SemiBold.woff2') format('woff2');
+  src: url('/fonts/Gilroy-SemiBold.woff2') format('woff2'),
+       url('/fonts/Gilroy-SemiBold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -57,7 +62,8 @@
 
 @font-face {
   font-family: 'Gilroy-Regular';
-  src: url('/fonts/Gilroy-Regular.woff2') format('woff2');
+  src: url('/fonts/Gilroy-Regular.woff2') format('woff2'),
+       url('/fonts/Gilroy-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -123,7 +129,7 @@
 
 /* Individual letter styles for Suhas - exact specifications */
 .suhas-span {
-  font-family: "Alegreya", serif;
+  font-family: "Alegreya-MediumItalic", "Alegreya", serif;
   font-size: 64px;
   line-height: 29px;
   letter-spacing: 0.2px;
@@ -134,7 +140,7 @@
 }
 
 .suhas-span2 {
-  font-family: "SwearDisplay", serif;
+  font-family: "SwearDisplay-Italic", "SwearDisplay", serif;
   font-size: 48px;
   line-height: 29px;
   letter-spacing: 0.2px;
@@ -144,7 +150,7 @@
 }
 
 .suhas-span3 {
-  font-family: "Marcellus", serif;
+  font-family: "Marcellus-Regular", "Marcellus", serif;
   font-size: 48px;
   line-height: 29px;
   letter-spacing: 0.2px;
@@ -154,7 +160,7 @@
 }
 
 .suhas-span4 {
-  font-family: "Silkscreen", monospace;
+  font-family: "Silkscreen-Regular", "Silkscreen", monospace;
   font-size: 40px;
   line-height: 29px;
   letter-spacing: 0.2px;
