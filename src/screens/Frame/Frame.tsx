@@ -136,7 +136,7 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
                   >
                     <div className="flex items-center justify-between">
                       <span>Projects</span>
-                      <div className="w-2 h-2 bg-gradient-to-r from-green-100 to-teal-500 rounded-full"></div>
+                      <div className="w-2 h-2 bg-gradient-to-r from-green-100 to-teal-100 rounded-full"></div>
                     </div>
                   </button>
                 </div>
