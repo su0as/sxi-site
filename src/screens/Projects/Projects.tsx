@@ -831,7 +831,6 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
         </div>
       </div>
     </PageLayout>
-  )
   );
 };
   )
