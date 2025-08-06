@@ -82,11 +82,11 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
             {/* Mobile Suhas Name */}
             <div className="mobile-name-container">
               <div className="text-white flex items-baseline justify-center">
-                <span className="suhas-span">S</span>
-                <span className="suhas-span2">u</span>
-                <span className="suhas-span3">h</span>
-                <span className="suhas-span3">a</span>
-                <span className="suhas-span4">s</span>
+                <span className="suhas-span" style={{ fontFamily: 'Alegreya, serif', fontWeight: 500, fontStyle: 'italic', fontSize: '48px', textTransform: 'uppercase' }}>S</span>
+                <span className="suhas-span2" style={{ fontFamily: 'SwearDisplay, serif', fontStyle: 'italic', fontSize: '36px' }}>u</span>
+                <span className="suhas-span3" style={{ fontFamily: 'Marcellus, serif', fontWeight: 400, fontSize: '36px' }}>h</span>
+                <span className="suhas-span3" style={{ fontFamily: 'Marcellus, serif', fontWeight: 400, fontSize: '36px' }}>a</span>
+                <span className="suhas-span4" style={{ fontFamily: 'Silkscreen, monospace', fontWeight: 400, fontSize: '30px' }}>s</span>
               </div>
             </div>
             {/* Mobile Navigation */}
