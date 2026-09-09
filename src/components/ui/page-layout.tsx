@@ -115,7 +115,9 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
 
         {/* Professional identity line */}
         <p className="identity-line">
-          Robotics &amp; AI engineer. MSc Robotics and Intelligent Systems, NTU Singapore.
+          Robotics &amp; AI engineer.
+          <br />
+          MSc Robotics and Intelligent Systems, NTU Singapore.
         </p>
 
         {/* Navigation menu */}
@@ -123,25 +125,15 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
 
         {/* Social / contact links */}
         <div className="contact-links">
-          <div className="contact-links-row">
-            <a
-              href="https://x.com/suhasxi"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="you-can-find-me-on-x hover:scale-105 transition-transform duration-200"
-              aria-label="Find Suhas on X (formerly Twitter)"
-            >
-              You can find me on X
-            </a>
-            <a
-              href="/Suhas_Suren_CV.pdf"
-              download
-              className="contact-link"
-              aria-label="Download Suhas's CV"
-            >
-              Download CV
-            </a>
-          </div>
+          <a
+            href="https://x.com/suhasxi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="you-can-find-me-on-x hover:scale-105 transition-transform duration-200"
+            aria-label="Find Suhas on X (formerly Twitter)"
+          >
+            You can find me on X
+          </a>
           <a href="mailto:suh.as@icloud.com" className="contact-link" aria-label="Email Suhas">
             Email
           </a>
@@ -153,6 +145,14 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
             aria-label="Suhas on GitHub"
           >
             GitHub
+          </a>
+          <a
+            href="/Suhas_Suren_CV.pdf"
+            download
+            className="contact-link"
+            aria-label="Download Suhas's CV"
+          >
+            Download CV
           </a>
           <span
             className="contact-link is-placeholder"
@@ -242,13 +242,6 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
                   You can find me on X
                 </a>
                 <a
-                  href="/Suhas_Suren_CV.pdf"
-                  download
-                  className="block text-white font-['Gilroy-SemiBold',sans-serif] text-base hover:text-gray-300 transition-colors"
-                >
-                  Download CV
-                </a>
-                <a
                   href="mailto:suh.as@icloud.com"
                   className="block text-white font-['Gilroy-SemiBold',sans-serif] text-base hover:text-gray-300 transition-colors"
                 >
@@ -261,6 +254,13 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
                   className="block text-white font-['Gilroy-SemiBold',sans-serif] text-base hover:text-gray-300 transition-colors"
                 >
                   GitHub
+                </a>
+                <a
+                  href="/Suhas_Suren_CV.pdf"
+                  download
+                  className="block text-white font-['Gilroy-SemiBold',sans-serif] text-base hover:text-gray-300 transition-colors"
+                >
+                  Download CV
                 </a>
                 <span
                   className="block text-white/40 font-['Gilroy-SemiBold',sans-serif] text-base"

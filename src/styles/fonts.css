@@ -91,13 +91,6 @@
   gap: 10px;
 }
 
-.contact-links-row {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px 20px;
-}
-
 .you-can-find-me-on-x {
   color: #ffffff;
   text-align: left;

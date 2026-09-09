@@ -70,7 +70,9 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
 
         {/* Professional identity line */}
         <p className="identity-line">
-          Robotics &amp; AI engineer. MSc Robotics and Intelligent Systems, NTU Singapore.
+          Robotics &amp; AI engineer.
+          <br />
+          MSc Robotics and Intelligent Systems, NTU Singapore.
         </p>
 
         {/* Navigation menu with line breaks as specified */}
@@ -78,25 +80,15 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
 
         {/* Social / contact links */}
         <div className="contact-links">
-          <div className="contact-links-row">
-            <a
-              href="https://x.com/suhasxi"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="you-can-find-me-on-x hover:scale-105 transition-transform duration-200"
-              aria-label="Find Suhas on X (formerly Twitter)"
-            >
-              You can find me on X
-            </a>
-            <a
-              href="/Suhas_Suren_CV.pdf"
-              download
-              className="contact-link"
-              aria-label="Download Suhas's CV"
-            >
-              Download CV
-            </a>
-          </div>
+          <a
+            href="https://x.com/suhasxi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="you-can-find-me-on-x hover:scale-105 transition-transform duration-200"
+            aria-label="Find Suhas on X (formerly Twitter)"
+          >
+            You can find me on X
+          </a>
           <a href="mailto:suh.as@icloud.com" className="contact-link" aria-label="Email Suhas">
             Email
           </a>
@@ -108,6 +100,14 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
             aria-label="Suhas on GitHub"
           >
             GitHub
+          </a>
+          <a
+            href="/Suhas_Suren_CV.pdf"
+            download
+            className="contact-link"
+            aria-label="Download Suhas's CV"
+          >
+            Download CV
           </a>
           <span
             className="contact-link is-placeholder"
@@ -146,7 +146,9 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
                 </h1>
 
                 <p className="text-white/60 text-sm mb-2 px-4" style={{ fontFamily: 'Gilroy-Regular, sans-serif' }}>
-                  Robotics &amp; AI engineer. MSc Robotics and Intelligent Systems, NTU Singapore.
+                  Robotics &amp; AI engineer.
+                  <br />
+                  MSc Robotics and Intelligent Systems, NTU Singapore.
                 </p>
                 <div className="w-16 h-0.5 bg-white/30 mx-auto"></div>
               </div>
@@ -221,13 +223,6 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
                   </p>
                   <div className="flex flex-col gap-3 items-center">
                     <a
-                      href="/Suhas_Suren_CV.pdf"
-                      download
-                      className="text-white font-['Gilroy-SemiBold',sans-serif] text-base hover:text-blue-300 transition-colors duration-300 py-2 min-h-[44px] flex items-center"
-                    >
-                      Download CV
-                    </a>
-                    <a
                       href="mailto:suh.as@icloud.com"
                       className="text-white font-['Gilroy-SemiBold',sans-serif] text-base hover:text-blue-300 transition-colors duration-300 py-2 min-h-[44px] flex items-center"
                     >
@@ -240,6 +235,13 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
                       className="text-white font-['Gilroy-SemiBold',sans-serif] text-base hover:text-blue-300 transition-colors duration-300 py-2 min-h-[44px] flex items-center"
                     >
                       GitHub
+                    </a>
+                    <a
+                      href="/Suhas_Suren_CV.pdf"
+                      download
+                      className="text-white font-['Gilroy-SemiBold',sans-serif] text-base hover:text-blue-300 transition-colors duration-300 py-2 min-h-[44px] flex items-center"
+                    >
+                      Download CV
                     </a>
                     <span
                       className="text-white/40 font-['Gilroy-SemiBold',sans-serif] text-base py-2 min-h-[44px] flex items-center"
