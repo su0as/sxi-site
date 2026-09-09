@@ -8,10 +8,10 @@
 
 "use client"
 
-import React, { useState, useEffect, useRef } from "react";
-import { Menu, X } from "lucide-react";
+import React, { useState, useEffect } from "react";
 import { Navigation } from "./navigation";
 import { LoadingBar } from "./loading-bar";
+import { MobileTabBar } from "./mobile-tab-bar";
 import "../../styles/fonts.css";
 
 interface PageLayoutProps {
@@ -20,17 +20,15 @@ interface PageLayoutProps {
   onNavigate: (page: string) => void;
 }
 
-export const PageLayout: React.FC<PageLayoutProps> = ({ 
-  children, 
-  currentPage, 
-  onNavigate 
+export const PageLayout: React.FC<PageLayoutProps> = ({
+  children,
+  currentPage,
+  onNavigate
 }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
   const [showContent, setShowContent] = useState(false);
   const [contentReady, setContentReady] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const img = new Image();
@@ -50,25 +48,6 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
   };
 
   const isLoading = (!imageLoaded && !imageError) || !contentReady;
-
-  // Close mobile menu when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        setIsMobileMenuOpen(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
-
-  const handleMobileNavigate = (page: string) => {
-    setIsMobileMenuOpen(false);
-    onNavigate(page);
-  };
 
   const handleSuhasClick = () => {
     onNavigate('home');
@@ -164,121 +143,31 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
         </div>
       </div>
 
-      {/* Mobile Navigation */}
-      <div className={`md:hidden relative z-50 transition-all duration-500 ease-out ${showContent || imageError ? 'opacity-100' : 'opacity-0'}`} ref={menuRef}>
-        {/* Mobile Menu Button */}
+      {/* Mobile top bar - compact wordmark, tap to go home */}
+      <div
+        className={`md:hidden sticky top-0 z-30 flex items-center bg-black/40 backdrop-blur-md border-b border-white/10 px-6 py-3 transition-opacity duration-500 ease-out ${showContent || imageError ? 'opacity-100' : 'opacity-0'}`}
+      >
         <button
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="fixed top-4 right-4 z-50 p-2 bg-black/50 backdrop-blur-sm rounded-lg border border-white/20"
-          aria-label="Toggle mobile menu"
+          onClick={handleSuhasClick}
+          className="suhas-mobile-compact flex items-baseline gap-px"
+          aria-label="Suhas - go to home"
         >
-          {isMobileMenuOpen ? (
-            <X className="w-6 h-6 text-white" />
-          ) : (
-            <Menu className="w-6 h-6 text-white" />
-          )}
+          <span className="font-['Alegreya',serif] font-medium italic text-2xl text-white">S</span>
+          <span className="font-['SwearDisplay',serif] italic text-xl text-white">u</span>
+          <span className="font-['Marcellus',serif] text-xl text-white">h</span>
+          <span className="font-['Marcellus',serif] text-xl text-white">a</span>
+          <span className="font-['Silkscreen',monospace] text-lg text-white">s</span>
         </button>
-
-        {/* Mobile Dropdown Menu */}
-        {isMobileMenuOpen && (
-          <div className="fixed top-16 right-4 z-40 bg-black/90 backdrop-blur-md rounded-lg border border-white/20 p-4 min-w-[200px]">
-            {/* Suhas Name */}
-            <button
-              onClick={() => handleMobileNavigate('home')}
-              className="block w-full text-left mb-4 pb-3 border-b border-white/20"
-            >
-              <div className="suhas-mobile text-white text-2xl">
-                <span className="font-['Alegreya',serif] font-medium italic text-3xl">S</span>
-                <span className="font-['SwearDisplay',serif] italic text-2xl">u</span>
-                <span className="font-['Marcellus',serif] text-2xl">h</span>
-                <span className="font-['Marcellus',serif] text-2xl">a</span>
-                <span className="font-['Silkscreen',monospace] text-xl">s</span>
-              </div>
-            </button>
-
-            {/* Navigation Items */}
-            <div className="space-y-3">
-              <button
-                onClick={() => handleMobileNavigate('about')}
-                className={`block w-full text-left text-white font-['Gilroy-SemiBold',sans-serif] text-lg hover:text-gray-300 transition-colors ${
-                  currentPage === 'about' ? 'underline underline-offset-4' : ''
-                }`}
-              >
-                About
-              </button>
-              <button
-                onClick={() => handleMobileNavigate('projects')}
-                className={`block w-full text-left text-white font-['Gilroy-SemiBold',sans-serif] text-lg hover:text-gray-300 transition-colors ${
-                  currentPage === 'projects' ? 'underline underline-offset-4' : ''
-                }`}
-              >
-                Projects
-              </button>
-              <button
-                onClick={() => handleMobileNavigate('writings')}
-                className={`block w-full text-left text-white font-['Gilroy-SemiBold',sans-serif] text-lg hover:text-gray-300 transition-colors ${
-                  currentPage === 'writings' ? 'underline underline-offset-4' : ''
-                }`}
-              >
-                Writings
-              </button>
-              <button
-                onClick={() => handleMobileNavigate('curators-corner')}
-                className={`block w-full text-left text-white font-['Gilroy-SemiBold',sans-serif] text-lg hover:text-gray-300 transition-colors ${
-                  currentPage === 'curators-corner' ? 'underline underline-offset-4' : ''
-                }`}
-              >
-                Curator's Corner
-              </button>
-              
-              {/* Social / contact links */}
-              <div className="pt-3 border-t border-white/20 space-y-3">
-                <a
-                  href="https://x.com/suhasxi"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-white font-['Gilroy-SemiBold',sans-serif] text-lg hover:text-gray-300 transition-colors"
-                >
-                  You can find me on X
-                </a>
-                <a
-                  href="mailto:suh.as@icloud.com"
-                  className="block text-white font-['Gilroy-SemiBold',sans-serif] text-base hover:text-gray-300 transition-colors"
-                >
-                  Email
-                </a>
-                <a
-                  href="https://github.com/su0as"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-white font-['Gilroy-SemiBold',sans-serif] text-base hover:text-gray-300 transition-colors"
-                >
-                  GitHub
-                </a>
-                <a
-                  href="/Suhas_Suren_CV.pdf"
-                  download
-                  className="block text-white font-['Gilroy-SemiBold',sans-serif] text-base hover:text-gray-300 transition-colors"
-                >
-                  Download CV
-                </a>
-                <span
-                  className="block text-white/40 font-['Gilroy-SemiBold',sans-serif] text-base"
-                  title="TODO: add LinkedIn URL"
-                  aria-disabled="true"
-                >
-                  LinkedIn (link coming soon)
-                </span>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
 
       {/* Page Content */}
-      <div className={`transition-all duration-300 ease-out ${showContent || imageError ? 'opacity-100' : 'opacity-0'}`}>
+      <div
+        className={`pb-24 md:pb-0 transition-all duration-300 ease-out ${showContent || imageError ? 'opacity-100' : 'opacity-0'}`}
+      >
         {children}
       </div>
+
+      <MobileTabBar currentPage={currentPage} onNavigate={onNavigate} />
     </main>
   );
 };
