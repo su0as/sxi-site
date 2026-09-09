@@ -16,18 +16,49 @@ import { Writings } from "./screens/Writings";
 import { CuratorsCorner } from "./screens/CuratorsCorner";
 import { PageTransition } from "./components/ui/page-transition";
 
+const HASH_TO_PAGE: Record<string, string> = {
+  about: 'about',
+  projects: 'projects',
+  writings: 'writings',
+  curator: 'curators-corner',
+};
+
+const PAGE_TO_HASH: Record<string, string> = {
+  about: '#about',
+  projects: '#projects',
+  writings: '#writings',
+  'curators-corner': '#curator',
+};
+
+const pageFromHash = (hash: string): string => {
+  const key = hash.replace(/^#/, '');
+  return HASH_TO_PAGE[key] ?? 'home';
+};
+
 export const App: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState<string>('home');
+  const [currentPage, setCurrentPage] = useState<string>(() => pageFromHash(window.location.hash));
   const [isTransitioning, setIsTransitioning] = useState(false);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      setCurrentPage(pageFromHash(window.location.hash));
+    };
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
 
   const handleNavigate = (page: string) => {
     if (page === currentPage) return;
-    
+
     setIsTransitioning(true);
-    
+
     setTimeout(() => {
       setCurrentPage(page);
       setIsTransitioning(false);
+
+      const newHash = PAGE_TO_HASH[page] ?? '';
+      const currentPath = window.location.pathname + window.location.search;
+      history.replaceState(null, '', newHash ? `${currentPath}${newHash}` : currentPath);
     }, 150);
   };
 

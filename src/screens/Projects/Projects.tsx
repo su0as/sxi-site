@@ -22,13 +22,13 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
       <div className="absolute top-[50px] left-[500px] right-[50px] bottom-[50px] overflow-y-auto hidden md:block">
         <div className="max-w-3xl text-white font-['Gilroy-SemiBold',sans-serif]">
           {/* Main Title */}
-          <h1 className="text-4xl font-semibold mb-12 text-center" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
+          <h2 className="text-4xl font-semibold mb-12 text-center" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
             Projects & Works
-          </h1>
+          </h2>
 
           {/* AI Ecosystem & Open-Source */}
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>AI Ecosystem & Open-Source</h2>
+            <h3 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>AI Ecosystem & Open-Source</h3>
             
             <div className="mb-6 ml-6">
               <a 
@@ -93,7 +93,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
 
           {/* AI-Powered Creative & Marketing */}
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>AI-Powered Creative & Marketing</h2>
+            <h3 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>AI-Powered Creative & Marketing</h3>
             
             <div className="mb-6 ml-6">
               <a 
@@ -111,7 +111,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
             </div>
 
             <div className="mb-6 ml-6">
-              <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>LLMs Wrapped</h3>
+              <h4 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>LLMs Wrapped</h4>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 Spotify Wrapped-style summary of AI tools (ChatGPT, Gemini) to evaluate options fast.
               </p>
@@ -120,7 +120,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
 
           {/* AI Agents for Automation */}
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>AI Agents for Automation</h2>
+            <h3 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>AI Agents for Automation</h3>
             
             <div className="mb-6 ml-6">
               <a 
@@ -138,7 +138,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
             </div>
 
             <div className="mb-6 ml-6">
-              <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>First Principles LLM</h3>
+              <h4 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>First Principles LLM</h4>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 Solves complex problems with actionable insights.
               </p>
@@ -162,7 +162,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
 
           {/* Manufacturing Solutions */}
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Manufacturing Solutions</h2>
+            <h3 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Manufacturing Solutions</h3>
             
             <div className="mb-6 ml-6">
               <a 
@@ -182,10 +182,10 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
 
           {/* Productivity Tools */}
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Productivity Tools</h2>
+            <h3 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Productivity Tools</h3>
             
             <div className="mb-6 ml-6">
-              <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Notify</h3>
+              <h4 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Notify</h4>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 Real-time keyword tracking via WhatsApp for trends and competitors.
               </p>
@@ -207,7 +207,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
             </div>
 
             <div className="mb-6 ml-6">
-              <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Notes AI</h3>
+              <h4 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Notes AI</h4>
               <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 AI-powered notes for organization and insights.
               </p>
@@ -216,7 +216,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
 
           {/* Niche Projects */}
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Niche Projects</h2>
+            <h3 className="text-2xl font-semibold mb-6" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>Niche Projects</h3>
             
             <div className="mb-6 ml-6">
               <a 
@@ -260,9 +260,9 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-2xl mb-4 border border-white/10">
                 <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg"></div>
               </div>
-              <h1 className="text-2xl font-semibold tracking-tight mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
+              <h2 className="text-2xl font-semibold tracking-tight mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
                 Projects & Works
-              </h1>
+              </h2>
               <p className="text-sm text-white/60" style={{ fontFamily: 'Gilroy-Regular, sans-serif' }}>
                 Explore my latest innovations
               </p>
@@ -274,9 +274,9 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
               <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-5 border border-white/20 shadow-xl">
                 <div className="flex items-center mb-5">
                   <div className="w-3 h-3 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mr-3"></div>
-                  <h2 className="text-lg font-semibold text-white" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
+                  <h3 className="text-lg font-semibold text-white" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
                     AI Ecosystem & Open-Source
-                  </h2>
+                  </h3>
                 </div>
               
                 <div className="space-y-4">
@@ -346,9 +346,9 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
               <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-5 border border-white/20 shadow-xl">
                 <div className="flex items-center mb-5">
                   <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full mr-3"></div>
-                  <h2 className="text-lg font-semibold text-white" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
+                  <h3 className="text-lg font-semibold text-white" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
                     AI-Powered Creative & Marketing
-                  </h2>
+                  </h3>
                 </div>
                 
                 <div className="space-y-4">
@@ -368,9 +368,9 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
                   </div>
 
                   <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:bg-white/15 hover:border-white/30 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
-                    <h3 className="text-base font-semibold mb-2 text-white" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
+                    <h4 className="text-base font-semibold mb-2 text-white" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
                       LLMs Wrapped
-                    </h3>
+                    </h4>
                     <p className="text-xs leading-relaxed text-white/70" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                       Spotify Wrapped-style summary of AI tools (ChatGPT, Gemini) to evaluate options fast.
                     </p>
@@ -382,9 +382,9 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
               <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-5 border border-white/20 shadow-xl">
                 <div className="flex items-center mb-5">
                   <div className="w-3 h-3 bg-gradient-to-r from-orange-400 to-red-500 rounded-full mr-3"></div>
-                  <h2 className="text-lg font-semibold text-white" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
+                  <h3 className="text-lg font-semibold text-white" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
                     AI Agents for Automation
-                  </h2>
+                  </h3>
                 </div>
                 
                 <div className="space-y-4">
@@ -404,9 +404,9 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
                   </div>
 
                   <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:bg-white/15 hover:border-white/30 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
-                    <h3 className="text-base font-semibold mb-2 text-white" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
+                    <h4 className="text-base font-semibold mb-2 text-white" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
                       First Principles LLM
-                    </h3>
+                    </h4>
                     <p className="text-xs leading-relaxed text-white/70" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                       Solves complex problems with actionable insights.
                     </p>
@@ -433,9 +433,9 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
               <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-5 border border-white/20 shadow-xl">
                 <div className="flex items-center mb-5">
                   <div className="w-3 h-3 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full mr-3"></div>
-                  <h2 className="text-lg font-semibold text-white" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
+                  <h3 className="text-lg font-semibold text-white" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
                     Manufacturing Solutions
-                  </h2>
+                  </h3>
                 </div>
                 
                 <div className="space-y-4">
@@ -460,16 +460,16 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
               <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-5 border border-white/20 shadow-xl">
                 <div className="flex items-center mb-5">
                   <div className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mr-3"></div>
-                  <h2 className="text-lg font-semibold text-white" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
+                  <h3 className="text-lg font-semibold text-white" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
                     Productivity Tools
-                  </h2>
+                  </h3>
                 </div>
                 
                 <div className="space-y-4">
                   <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:bg-white/15 hover:border-white/30 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
-                    <h3 className="text-base font-semibold mb-2 text-white" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
+                    <h4 className="text-base font-semibold mb-2 text-white" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
                       Notify
-                    </h3>
+                    </h4>
                     <p className="text-xs leading-relaxed text-white/70" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                       Real-time keyword tracking via WhatsApp for trends and competitors.
                     </p>
@@ -491,9 +491,9 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
                   </div>
 
                   <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:bg-white/15 hover:border-white/30 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
-                    <h3 className="text-base font-semibold mb-2 text-white" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
+                    <h4 className="text-base font-semibold mb-2 text-white" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
                       Notes AI
-                    </h3>
+                    </h4>
                     <p className="text-xs leading-relaxed text-white/70" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                       AI-powered notes for organization and insights.
                     </p>
@@ -505,9 +505,9 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
               <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-5 border border-white/20 shadow-xl">
                 <div className="flex items-center mb-5">
                   <div className="w-3 h-3 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-full mr-3"></div>
-                  <h2 className="text-lg font-semibold text-white" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
+                  <h3 className="text-lg font-semibold text-white" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
                     Niche Projects
-                  </h2>
+                  </h3>
                 </div>
                 
                 <div className="space-y-4">

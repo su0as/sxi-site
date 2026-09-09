@@ -21,9 +21,9 @@ export const CuratorsCorner: React.FC<CuratorsCornerProps> = ({ onNavigate }) =>
       <div className="absolute top-1/2 left-[500px] right-[50px] transform -translate-y-1/2 hidden md:block">
         <div className="max-w-3xl text-white font-['Gilroy-SemiBold',sans-serif]">
           <div className="text-center">
-            <h1 className="text-4xl font-semibold mb-12" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
+            <h2 className="text-4xl font-semibold mb-12" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
               In Progress...
-            </h1>
+            </h2>
           </div>
         </div>
       </div>
@@ -37,9 +37,9 @@ export const CuratorsCorner: React.FC<CuratorsCornerProps> = ({ onNavigate }) =>
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500/20 to-pink-600/20 rounded-2xl mb-4 border border-white/10">
                 <div className="w-8 h-8 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg"></div>
               </div>
-              <h1 className="text-3xl font-semibold tracking-tight mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
+              <h2 className="text-3xl font-semibold tracking-tight mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
                 Curator's Corner
-              </h1>
+              </h2>
               <p className="text-sm text-white/60" style={{ fontFamily: 'Gilroy-Regular, sans-serif' }}>
                 Curated discoveries and insights
               </p>
@@ -52,9 +52,9 @@ export const CuratorsCorner: React.FC<CuratorsCornerProps> = ({ onNavigate }) =>
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-indigo-500/20 to-purple-600/20 rounded-xl mb-6 border border-white/10">
                   <div className="w-6 h-6 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-md"></div>
                 </div>
-                <h2 className="text-2xl font-semibold mb-4 text-white" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
+                <h3 className="text-2xl font-semibold mb-4 text-white" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
                   In Progress...
-                </h2>
+                </h3>
                 <p className="text-white/70 text-sm" style={{ fontFamily: 'Gilroy-Regular, sans-serif' }}>
                   Curating amazing content for you
                 </p>

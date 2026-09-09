@@ -19,6 +19,7 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
     <PageLayout currentPage="about" onNavigate={onNavigate}>
       <div className="absolute top-1/2 left-[500px] right-[50px] transform -translate-y-1/2 hidden md:block">
         <div className="max-w-3xl text-white font-['Gilroy-SemiBold',sans-serif]">
+          <h2 className="sr-only">About</h2>
           <div className="text-lg font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
             <p className="mb-6">
               I like to <span className="font-semibold" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif', fontWeight: 600 }}>ask questions</span>. Basically <span className="font-semibold" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif', fontWeight: 600 }}>ask "why?"</span> about everything, <span className="font-semibold" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif', fontWeight: 600 }}>breaking it down to first principles</span>. I <span className="font-semibold" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif', fontWeight: 600 }}>read</span> widely, from <span className="font-semibold" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif', fontWeight: 600 }}>philosophy to physics</span>, and simplify complex ideas. I enjoy video games for <span className="font-semibold" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif', fontWeight: 600 }}>strategy, systems, and RPG elements.</span>
@@ -44,9 +45,9 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-2xl mb-4 border border-white/10">
                 <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg"></div>
               </div>
-              <h1 className="text-3xl font-semibold tracking-tight mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
+              <h2 className="text-3xl font-semibold tracking-tight mb-2" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
                 About
-              </h1>
+              </h2>
               <p className="text-sm text-white/60" style={{ fontFamily: 'Gilroy-Regular, sans-serif' }}>
                 Get to know me better
               </p>

@@ -98,20 +98,9 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
         className={`frame-2 absolute top-[276px] left-[166px] hidden md:block transition-all duration-500 ease-out ${showContent || imageError ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'}`}
         aria-label="Portfolio content"
       >
-        {/* Social media text */}
-        <a 
-          href="https://x.com/suhasxi" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="you-can-find-me-on-x hover:scale-105 transition-transform duration-200"
-          aria-label="Find Suhas on X (formerly Twitter)"
-        >
-          You can find me on X
-        </a>
-        
         {/* Name with mixed typography - clickable to go home */}
-        <div 
-          className="suhas cursor-pointer" 
+        <h1
+          className="suhas cursor-pointer"
           aria-label="Suhas - Click to go home"
           onClick={handleSuhasClick}
         >
@@ -122,10 +111,57 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
             <span className="suhas-span3">a</span>
             <span className="suhas-span4">s</span>
           </span>
-        </div>
-        
+        </h1>
+
+        {/* Professional identity line */}
+        <p className="identity-line">
+          Robotics &amp; AI engineer. MSc Robotics and Intelligent Systems, NTU Singapore.
+        </p>
+
         {/* Navigation menu */}
         <Navigation currentPage={currentPage} onNavigate={onNavigate} />
+
+        {/* Social / contact links */}
+        <div className="contact-links">
+          <div className="contact-links-row">
+            <a
+              href="https://x.com/suhasxi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="you-can-find-me-on-x hover:scale-105 transition-transform duration-200"
+              aria-label="Find Suhas on X (formerly Twitter)"
+            >
+              You can find me on X
+            </a>
+            <a
+              href="/Suhas_Suren_CV.pdf"
+              download
+              className="contact-link"
+              aria-label="Download Suhas's CV"
+            >
+              Download CV
+            </a>
+          </div>
+          <a href="mailto:suh.as@icloud.com" className="contact-link" aria-label="Email Suhas">
+            Email
+          </a>
+          <a
+            href="https://github.com/su0as"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-link"
+            aria-label="Suhas on GitHub"
+          >
+            GitHub
+          </a>
+          <span
+            className="contact-link is-placeholder"
+            title="TODO: add LinkedIn URL"
+            aria-disabled="true"
+          >
+            LinkedIn (link coming soon)
+          </span>
+        </div>
       </div>
 
       {/* Mobile Navigation */}
@@ -195,8 +231,8 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
                 Curator's Corner
               </button>
               
-              {/* Social Link */}
-              <div className="pt-3 border-t border-white/20">
+              {/* Social / contact links */}
+              <div className="pt-3 border-t border-white/20 space-y-3">
                 <a
                   href="https://x.com/suhasxi"
                   target="_blank"
@@ -205,6 +241,34 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
                 >
                   You can find me on X
                 </a>
+                <a
+                  href="/Suhas_Suren_CV.pdf"
+                  download
+                  className="block text-white font-['Gilroy-SemiBold',sans-serif] text-base hover:text-gray-300 transition-colors"
+                >
+                  Download CV
+                </a>
+                <a
+                  href="mailto:suh.as@icloud.com"
+                  className="block text-white font-['Gilroy-SemiBold',sans-serif] text-base hover:text-gray-300 transition-colors"
+                >
+                  Email
+                </a>
+                <a
+                  href="https://github.com/su0as"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-white font-['Gilroy-SemiBold',sans-serif] text-base hover:text-gray-300 transition-colors"
+                >
+                  GitHub
+                </a>
+                <span
+                  className="block text-white/40 font-['Gilroy-SemiBold',sans-serif] text-base"
+                  title="TODO: add LinkedIn URL"
+                  aria-disabled="true"
+                >
+                  LinkedIn (link coming soon)
+                </span>
               </div>
             </div>
           </div>
