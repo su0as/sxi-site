@@ -74,7 +74,7 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
 
       {/* Content section with exact positioning */}
       <div
-        className={`frame-2 absolute top-[276px] left-[166px] hidden md:block transition-all duration-500 ease-out ${showContent || imageError ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'}`}
+        className={`frame-2 absolute top-[190px] left-[230px] hidden md:block transition-all duration-500 ease-out ${showContent || imageError ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'}`}
         aria-label="Portfolio content"
       >
         {/* Name with mixed typography - clickable to go home */}
