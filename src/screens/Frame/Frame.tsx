@@ -91,8 +91,14 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
           >
             You can find me on X
           </a>
-          <a href="mailto:suh.as@icloud.com" className="contact-link" aria-label="Email Suhas">
-            Email
+          <a
+            href="https://www.linkedin.com/in/suhas-s-37191120b/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-link"
+            aria-label="Suhas on LinkedIn"
+          >
+            LinkedIn
           </a>
           <a
             href="https://github.com/su0as"
@@ -103,6 +109,9 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
           >
             GitHub
           </a>
+          <a href="mailto:suh.as@icloud.com" className="contact-link" aria-label="Email Suhas">
+            Email
+          </a>
           <a
             href="/Suhas_Suren_CV.pdf"
             download
@@ -110,15 +119,6 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
             aria-label="Download Suhas's CV"
           >
             Download CV
-          </a>
-          <a
-            href="https://www.linkedin.com/in/suhas-s-37191120b/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="contact-link"
-            aria-label="Suhas on LinkedIn"
-          >
-            LinkedIn
           </a>
         </div>
       </div>
@@ -164,6 +164,15 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
                 <XIcon size={18} />
               </a>
               <a
+                href="https://www.linkedin.com/in/suhas-s-37191120b/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Suhas on LinkedIn"
+                className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 active:scale-95 backdrop-blur-sm border border-white/15 text-white transition-all duration-200"
+              >
+                <Linkedin size={18} />
+              </a>
+              <a
                 href="https://github.com/su0as"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -178,15 +187,6 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
                 className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 active:scale-95 backdrop-blur-sm border border-white/15 text-white transition-all duration-200"
               >
                 <Mail size={18} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/suhas-s-37191120b/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Suhas on LinkedIn"
-                className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 active:scale-95 backdrop-blur-sm border border-white/15 text-white transition-all duration-200"
-              >
-                <Linkedin size={18} />
               </a>
             </div>
 

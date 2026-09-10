@@ -113,8 +113,14 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
           >
             You can find me on X
           </a>
-          <a href="mailto:suh.as@icloud.com" className="contact-link" aria-label="Email Suhas">
-            Email
+          <a
+            href="https://www.linkedin.com/in/suhas-s-37191120b/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-link"
+            aria-label="Suhas on LinkedIn"
+          >
+            LinkedIn
           </a>
           <a
             href="https://github.com/su0as"
@@ -125,6 +131,9 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
           >
             GitHub
           </a>
+          <a href="mailto:suh.as@icloud.com" className="contact-link" aria-label="Email Suhas">
+            Email
+          </a>
           <a
             href="/Suhas_Suren_CV.pdf"
             download
@@ -132,15 +141,6 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
             aria-label="Download Suhas's CV"
           >
             Download CV
-          </a>
-          <a
-            href="https://www.linkedin.com/in/suhas-s-37191120b/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="contact-link"
-            aria-label="Suhas on LinkedIn"
-          >
-            LinkedIn
           </a>
         </div>
       </div>
