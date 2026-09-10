@@ -57,7 +57,7 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
 
       {/* Content section with exact positioning */}
       <div
-        className={`frame-2 absolute top-[276px] left-[166px] hidden md:block transition-all duration-500 ease-out ${showContent || imageError ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'}`}
+        className={`frame-2 absolute top-[190px] left-[230px] hidden md:block transition-all duration-500 ease-out ${showContent || imageError ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'}`}
       >
         {/* Name with mixed typography - exact structure as specified */}
         <h1 className="suhas" aria-label="Suhas">
@@ -111,13 +111,15 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
           >
             Download CV
           </a>
-          <span
-            className="contact-link is-placeholder"
-            title="TODO: add LinkedIn URL"
-            aria-disabled="true"
+          <a
+            href="https://www.linkedin.com/in/suhas-s-37191120b/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-link"
+            aria-label="Suhas on LinkedIn"
           >
-            LinkedIn (link coming soon)
-          </span>
+            LinkedIn
+          </a>
         </div>
       </div>
 
@@ -127,8 +129,11 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
           className={`flex-1 flex flex-col items-center justify-center px-6 pt-16 pb-28 transition-all duration-500 ease-out ${showContent || imageError ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'}`}
         >
           <div className="w-full max-w-sm mx-auto flex flex-col items-center text-center">
-            {/* Wordmark */}
-            <h1 className="suhas-mobile m-0 mb-4" aria-label="Suhas">
+            {/* Wordmark - the page's one <h1> lives on the desktop block above;
+                this is the same content for mobile viewports, exposed to
+                assistive tech as a level-1 heading via ARIA rather than a
+                second literal <h1> element. */}
+            <div className="suhas-mobile m-0 mb-4" role="heading" aria-level={1} aria-label="Suhas">
               <span className="text-white">
                 <span className="font-['Alegreya',serif] font-medium italic text-6xl">S</span>
                 <span className="font-['SwearDisplay',serif] italic text-5xl">u</span>
@@ -136,7 +141,7 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
                 <span className="font-['Marcellus',serif] text-5xl">a</span>
                 <span className="font-['Silkscreen',monospace] text-4xl">s</span>
               </span>
-            </h1>
+            </div>
 
             <p
               className="text-white/70 text-base leading-snug mb-7"
@@ -174,13 +179,15 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
               >
                 <Mail size={18} />
               </a>
-              <span
-                aria-disabled="true"
-                title="TODO: add LinkedIn URL"
-                className="w-12 h-12 flex items-center justify-center rounded-full bg-white/5 border border-white/10 text-white/40"
+              <a
+                href="https://www.linkedin.com/in/suhas-s-37191120b/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Suhas on LinkedIn"
+                className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 active:scale-95 backdrop-blur-sm border border-white/15 text-white transition-all duration-200"
               >
                 <Linkedin size={18} />
-              </span>
+              </a>
             </div>
 
             {/* Primary CTA */}

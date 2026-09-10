@@ -69,7 +69,7 @@
   display: flex;
   flex-direction: column;
   width: max-content;
-  max-width: 380px;
+  max-width: 460px;
 }
 
 /* Identity line - added under the wordmark, above the nav */
@@ -78,25 +78,30 @@
   font-family: "Gilroy-Regular", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 22px;
-  margin: 8px 0 0;
-  max-width: 320px;
+  line-height: 24px;
+  margin: 12px 0 0;
 }
 
-/* Contact / social links - exact typography preserved from original spec */
+/* Section groups (wordmark+bio / nav / contacts) share one consistent gap */
+.about-projects-writings-curator-s-corner,
 .contact-links {
-  margin-top: 28px;
+  margin-top: 32px;
+}
+
+/* Contact / social links - unified size so the list reads as one even list */
+.contact-links {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
-.you-can-find-me-on-x {
+.you-can-find-me-on-x,
+.contact-link {
   color: #ffffff;
   text-align: left;
   font-family: "Gilroy-SemiBold", sans-serif;
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 20px;
+  line-height: 26px;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
@@ -105,39 +110,11 @@
   transition: all 0.3s ease;
 }
 
-.you-can-find-me-on-x:hover {
-  opacity: 0.9;
-  text-decoration: underline;
-  transform: translateY(-2px);
-}
-
-.contact-link {
-  color: #ffffff;
-  font-family: "Gilroy-SemiBold", sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-}
-
+.you-can-find-me-on-x:hover,
 .contact-link:hover {
   opacity: 0.9;
   text-decoration: underline;
   transform: translateY(-2px);
-}
-
-.contact-link.is-placeholder {
-  color: rgba(255, 255, 255, 0.45);
-  cursor: not-allowed;
-}
-
-.contact-link.is-placeholder:hover {
-  opacity: 0.45;
-  text-decoration: none;
-  transform: none;
 }
 
 /* Suhas name container - exact typography preserved from original spec */

@@ -133,13 +133,15 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
           >
             Download CV
           </a>
-          <span
-            className="contact-link is-placeholder"
-            title="TODO: add LinkedIn URL"
-            aria-disabled="true"
+          <a
+            href="https://www.linkedin.com/in/suhas-s-37191120b/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-link"
+            aria-label="Suhas on LinkedIn"
           >
-            LinkedIn (link coming soon)
-          </span>
+            LinkedIn
+          </a>
         </div>
       </div>
 
