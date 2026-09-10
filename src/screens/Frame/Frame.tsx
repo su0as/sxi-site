@@ -204,7 +204,7 @@ export const Frame: React.FC<FrameProps> = ({ onNavigate }) => {
               className="text-white/40 text-xs mt-6"
               style={{ fontFamily: 'Gilroy-Regular, sans-serif' }}
             >
-              Tap a tab below to explore About, Projects, Writings &amp; Curator's Corner.
+              Tap a tab below to explore About, Projects &amp; Writings.
             </p>
           </div>
         </div>

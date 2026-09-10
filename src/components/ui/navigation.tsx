@@ -19,8 +19,7 @@ export const Navigation: React.FC<NavigationProps> = ({ onNavigate, currentPage 
   const navigationItems = [
     { key: 'about', label: 'About' },
     { key: 'projects', label: 'Projects' },
-    { key: 'writings', label: 'Writings' },
-    { key: 'curators-corner', label: "Curator's Corner" }
+    { key: 'writings', label: 'Writings' }
   ];
 
   return (

@@ -42,9 +42,16 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
               <p className="text-sm text-white/50 mb-3" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 Real-time sports biomechanics, iOS · live on the App Store · 250+ paying subscribers · 4.8/5 rating
               </p>
-              <p className="text-base font-normal leading-relaxed" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
+              <p className="text-base font-normal leading-relaxed mb-2" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
                 Closed-loop perception pipeline: camera capture → skeletal pose estimation → CoreML inference → corrective feedback, at under 100ms end-to-end, entirely on-device with no cloud dependency. Tuned inference to 30–50ms on 2017-generation hardware through model quantisation, pruning and thermal-throttling mitigation. 600+ sessions/month.
               </p>
+              <a
+                href="/writings/pose-estimation-30ms-iphone-8"
+                className="text-sm font-semibold hover:underline transition-all duration-200"
+                style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}
+              >
+                Read the engineering write-up →
+              </a>
             </div>
 
             <div className="mb-8 ml-6">
@@ -341,22 +348,31 @@ export const Projects: React.FC<ProjectsProps> = ({ onNavigate }) => {
               Shipped Products
             </h3>
             <div className="space-y-3">
-              <a
-                href="https://shotaiapp.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block bg-white/8 active:bg-white/15 rounded-2xl p-4 border border-white/15 transition-colors duration-150"
-              >
-                <span className="text-base font-semibold mb-1 block" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
-                  Shot AI
-                </span>
-                <span className="text-[11px] leading-relaxed text-white/50 block mb-2" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
-                  iOS · 250+ paying subscribers · 4.8/5 rating
-                </span>
-                <span className="text-xs leading-relaxed text-white/70 block" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
-                  Real-time sports biomechanics — on-device pose estimation and CoreML inference at 30–50ms, no cloud dependency.
-                </span>
-              </a>
+              <div className="bg-white/8 rounded-2xl p-4 border border-white/15">
+                <a
+                  href="https://shotaiapp.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <span className="text-base font-semibold mb-1 block" style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}>
+                    Shot AI
+                  </span>
+                  <span className="text-[11px] leading-relaxed text-white/50 block mb-2" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
+                    iOS · 250+ paying subscribers · 4.8/5 rating
+                  </span>
+                  <span className="text-xs leading-relaxed text-white/70 block mb-2" style={{ fontFamily: 'Gilroy-Regular, sans-serif', fontWeight: 400 }}>
+                    Real-time sports biomechanics — on-device pose estimation and CoreML inference at 30–50ms, no cloud dependency.
+                  </span>
+                </a>
+                <a
+                  href="/writings/pose-estimation-30ms-iphone-8"
+                  className="text-xs font-semibold block active:underline"
+                  style={{ fontFamily: 'Gilroy-SemiBold, sans-serif' }}
+                >
+                  Read the engineering write-up →
+                </a>
+              </div>
 
               <a
                 href="https://answercareai.com"

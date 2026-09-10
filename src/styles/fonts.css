@@ -240,3 +240,130 @@
     line-height: 26px;
   }
 }
+
+/* Post body prose - rendered from build-time markdown HTML */
+.post-prose {
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "Gilroy-Regular", sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.post-prose > * + * {
+  margin-top: 1.25em;
+}
+
+.post-prose h2 {
+  color: #ffffff;
+  font-family: "Gilroy-SemiBold", sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+  margin-top: 2em;
+  margin-bottom: 0.6em;
+}
+
+.post-prose h3 {
+  color: #ffffff;
+  font-family: "Gilroy-SemiBold", sans-serif;
+  font-weight: 600;
+  font-size: 1.2em;
+  margin-top: 1.75em;
+  margin-bottom: 0.5em;
+}
+
+.post-prose strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.post-prose em {
+  font-style: italic;
+}
+
+.post-prose a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(255, 255, 255, 0.4);
+}
+
+.post-prose a:hover {
+  text-decoration-color: #ffffff;
+}
+
+.post-prose ul,
+.post-prose ol {
+  padding-left: 1.4em;
+}
+
+.post-prose ul {
+  list-style: disc;
+}
+
+.post-prose ol {
+  list-style: decimal;
+}
+
+.post-prose li + li {
+  margin-top: 0.4em;
+}
+
+.post-prose blockquote {
+  border-left: 2px solid rgba(255, 255, 255, 0.25);
+  padding-left: 1.1em;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.95em;
+}
+
+.post-prose blockquote > * + * {
+  margin-top: 0.75em;
+}
+
+.post-prose code {
+  font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 0.85em;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
+
+.post-prose pre {
+  background: #0d1117;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1em 1.2em;
+  overflow-x: auto;
+  font-size: 0.85em;
+  line-height: 1.6;
+}
+
+.post-prose pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+.post-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+}
+
+.post-prose th,
+.post-prose td {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.6em 0.9em;
+  text-align: left;
+}
+
+.post-prose th {
+  color: #ffffff;
+  font-family: "Gilroy-SemiBold", sans-serif;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.post-prose hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin: 2em 0;
+}

@@ -13,8 +13,11 @@ import { Frame } from "./screens/Frame";
 import { About } from "./screens/About";
 import { Projects } from "./screens/Projects";
 import { Writings } from "./screens/Writings";
+import { PostPage } from "./screens/Writings/PostPage";
 import { CuratorsCorner } from "./screens/CuratorsCorner";
 import { PageTransition } from "./components/ui/page-transition";
+
+const POST_PATH_RE = /^\/writings\/([^/]+)\/?$/;
 
 const HASH_TO_PAGE: Record<string, string> = {
   about: 'about',
@@ -36,6 +39,7 @@ const pageFromHash = (hash: string): string => {
 };
 
 export const App: React.FC = () => {
+  const postSlug = window.location.pathname.match(POST_PATH_RE)?.[1];
   const [currentPage, setCurrentPage] = useState<string>(() => pageFromHash(window.location.hash));
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -76,6 +80,10 @@ export const App: React.FC = () => {
         return <Frame onNavigate={handleNavigate} />;
     }
   };
+
+  if (postSlug) {
+    return <PostPage slug={postSlug} />;
+  }
 
   return (
     <PageTransition isVisible={!isTransitioning}>

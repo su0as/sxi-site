@@ -2,7 +2,7 @@
 
 import React from "react";
 import { createPortal } from "react-dom";
-import { Home, User, FolderKanban, PenLine, Sparkles } from "lucide-react";
+import { Home, User, FolderKanban, PenLine } from "lucide-react";
 
 interface MobileTabBarProps {
   currentPage: string;
@@ -14,7 +14,6 @@ const TABS = [
   { key: "about", label: "About", icon: User },
   { key: "projects", label: "Projects", icon: FolderKanban },
   { key: "writings", label: "Writings", icon: PenLine },
-  { key: "curators-corner", label: "Curator", icon: Sparkles },
 ] as const;
 
 export const MobileTabBar: React.FC<MobileTabBarProps> = ({ currentPage, onNavigate }) => {
